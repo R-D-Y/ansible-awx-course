@@ -8,6 +8,8 @@ Familiarisation avec la commande `docker ps`.
 2. Analysez la sortie et identifiez les conteneurs en cours d'exécution.
 3. Utilisez d'autres options de `docker ps` pour afficher différentes informations sur les conteneurs.
 
+------------------------------------
+
 ### Exercice 2
 #### Objectif :
 Apprentissage de la commande `docker run` pour démarrer un nouveau conteneur.
@@ -16,6 +18,8 @@ Apprentissage de la commande `docker run` pour démarrer un nouveau conteneur.
 1. Exécutez un conteneur Ubuntu en utilisant `docker run -it ubuntu`.
 2. À l'intérieur du conteneur, exécutez quelques commandes de base comme `ls`, `pwd`, etc.
 3. Fermez le conteneur en utilisant `exit`.
+
+------------------------------------
 
 ### Exercice 3
 #### Objectif :
@@ -26,6 +30,8 @@ Comprendre l'utilisation de la commande `docker exec` pour exécuter des command
 2. Utilisez `docker exec` pour exécuter la commande `ls` dans ce conteneur.
 3. Utilisez `docker exec -it` pour ouvrir un shell interactif à l'intérieur du conteneur.
 
+------------------------------------
+
 ### Exercice 4
 #### Objectif :
 Pratique des différentes options de `docker run`.
@@ -34,6 +40,8 @@ Pratique des différentes options de `docker run`.
 1. Exécutez un conteneur MySQL en utilisant `docker run -e MYSQL_ROOT_PASSWORD=password -d mysql`.
 2. Vérifiez l'état du conteneur avec `docker ps`.
 3. Arrêtez et supprimez le conteneur en utilisant `docker stop` et `docker rm`.
+
+------------------------------------
 
 ### Exercice 5
 #### Objectif :
