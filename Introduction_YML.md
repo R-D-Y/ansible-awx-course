@@ -1,4 +1,7 @@
-
+```
+YAML vs. JSON
+YAML is frequently an alternative to the data interchange format JSON (JavaScript Object Notation). Both are alternatives to XML (Extensible Markup Language). Both YAML and JSON are intended to be human-readable formats, although JSON more easily transfers from one programming language environment to another.
+```
 ## 1. Introduction à YAML
 
 ### a. Définition de YAML
