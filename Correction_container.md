@@ -10,6 +10,8 @@
    - `-d`: Détache le conteneur du terminal, permettant de libérer le terminal tout en laissant le conteneur s'exécuter en arrière-plan.
    - `-p 80:80`: Fait correspondre le port 80 du système hôte avec le port 80 du conteneur, permettant d'accéder au serveur web du conteneur depuis le navigateur.
 
+----------------------
+
 #### Correction de l'Exercice 2
 1. **Commande à exécuter**:
    ```bash
@@ -17,6 +19,8 @@
    ```
 2. **Explication**:
    - `docker ps -a`: Affiche tous les conteneurs, y compris ceux qui ne sont pas en cours d'exécution.
+
+----------------------
 
 #### Correction de l'Exercice 3
 1. **Commande à exécuter**:
@@ -29,6 +33,8 @@
    - `<ID_du_conteneur>`: Remplacez ceci par l'ID du conteneur que vous voulez accéder.
    - `/bin/bash`: Spécifie la commande à exécuter dans le conteneur, dans ce cas, le shell bash.
 
+----------------------
+
 #### Correction de l'Exercice 4
 1. **Commande à exécuter**:
    ```bash
@@ -38,6 +44,8 @@
    - `-e MYSQL_ROOT_PASSWORD=password`: Définit un mot de passe pour l'utilisateur root de MySQL dans le conteneur.
    - `-d`: Détache le conteneur du terminal, permettant de libérer le terminal tout en laissant le conteneur s'exécuter en arrière-plan.
    - `-v /mon/repertoire:/var/lib/mysql`: Montre le répertoire `/mon/repertoire` du système hôte dans `/var/lib/mysql` du conteneur, permettant ainsi à MySQL de stocker ses données dans ce répertoire.
+
+----------------------
 
 #### Correction de l'Exercice 5
 
