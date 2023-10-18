@@ -5,7 +5,11 @@
 YAML, acronyme de "YAML Ain't Markup Language", est un langage de sérialisation des données centré sur la lisibilité humaine. Conçu pour faciliter l'échange de données entre systèmes, sa structure est facilement interprétable par les ordinateurs.
 
 ### b. Les Bases de la Syntaxe YAML
-YAML mise sur l'indentation pour organiser les données. Son format clé-valeur intuitif représente les informations de manière structurée. L'importance de l'indentation, la manière de représenter les listes, ainsi que l'utilisation du caractère `#` pour les commentaires sont des aspects fondamentaux de sa syntaxe.
+YAML mise sur l'indentation pour organiser les données. Son format clé-valeur intuitif représente les informations de manière structurée. L'importance de l'indentation, la manière de représenter les listes, ainsi que l'utilisation du caractère `#` pour les commentaires sont des aspects fondamentaux de sa syntaxe. 
+
+De plus, pour ceux qui sont familiers avec le format JSON, YAML peut être considéré comme une version allégée de JSON avec moins de syntaxe. En effet, alors que JSON utilise des accolades et des crochets pour délimiter les objets et les listes, YAML s'appuie sur l'indentation. Cette simplification rend souvent YAML plus lisible, surtout pour des configurations plus longues ou complexes.
+
+
 
 Exemple simple en YAML :
 ```yaml
