@@ -1,5 +1,5 @@
 
-### **Présentation d'Ansible**
+# **[1] Présentation d'Ansible**
 
 **Qu'est-ce qu'Ansible?**
 
@@ -63,7 +63,7 @@ Pour les environnements plus complexes ou changeants, Ansible peut utiliser des 
 
 ---
 ---
-### **Hôtes et groupes**
+### **[2] Hôtes et groupes**
 
 Dans Ansible, les **hôtes** sont les machines sur lesquelles vous souhaitez exécuter des commandes ou installer quelque chose. Les hôtes sont définis dans l'inventaire Ansible. Pour faciliter la gestion, vous pouvez regrouper plusieurs hôtes en **groupes**. Par exemple, tous vos serveurs web peuvent être regroupés sous le nom "web" et vos bases de données sous le nom "db".
 
@@ -94,7 +94,7 @@ Pour les environnements plus complexes ou changeants, Ansible peut utiliser des 
 
 ---
 
-### **Commandes Ad-hoc**
+# **Commandes Ad-hoc**
 
 Les commandes ad-hoc sont des commandes Ansible que vous pouvez exécuter de manière ponctuelle pour effectuer une tâche simple, sans écrire un playbook. Elles sont utiles pour des tâches rapides, mais pour des tâches plus complexes ou répétitives, il est préférable d'utiliser des playbooks.
 
@@ -151,7 +151,7 @@ Commande Ad-hoc à travers Ansible:
 ---
 ---
 
-### **Modules Ansible**
+# **[3] Modules Ansible**
 
 ---
 
@@ -230,7 +230,7 @@ Modules Ansible et leur utilisation:
 ---
 ---
 
-### **Playbooks**
+# **[4]Les Playbooks**
 
 ---
 
@@ -301,7 +301,7 @@ Création et l'exécution d'un playbook Ansible avec un inventaire spécifique:
 ---
 ---
 
-### **Gestion des Variables**
+# **[5] Gestion des Variables**
 
 ---
 
@@ -359,7 +359,7 @@ Gestion des variables dans Ansible:
 ---
 ---
 
-### **Gestion des Variables**
+# **[6] Gestion des Variables**
 
 ---
 
@@ -415,7 +415,7 @@ Gestion des variables dans Ansible:
 ---
 ---
 
-### **Vault Ansible**
+# **[7] Vault Ansible**
 
 ---
 
@@ -472,7 +472,7 @@ Processus de chiffrement, de déchiffrement et d'utilisation des données avec A
 ---
 ---
 ---
-### **Rôles Ansible**
+# **[8] Rôles Ansible**
 
 ---
 
@@ -536,7 +536,7 @@ voici un exemple au format tree, puis en diagramme:
 ---
 ---
 ---
-### **Bonnes Pratiques Ansible**
+# **[9] Bonnes Pratiques Ansible**
 
 ---
 
@@ -589,7 +589,7 @@ Bonnes pratiques Ansible:
 ---
 ---
 
-### **Conclusion**
+# **[10] Conclusion**
 
 ---
 
