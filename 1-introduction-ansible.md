@@ -601,7 +601,7 @@ Pour approfondir vos connaissances sur Ansible, voici quelques ressources recomm
 - **Documentation officielle Ansible**: La source la plus complète et à jour sur Ansible.
 - **Forums et communautés Ansible**: Des lieux pour poser des questions, partager des connaissances et apprendre des autres.
 - **Livres et tutoriels**: Il existe de nombreux livres et tutoriels qui couvrent Ansible en profondeur.
-- **Cours en ligne**: Nous vous proposerons quelques petits exercices afin de mettre en application vos connaissances
+- **Cours en ligne**: Nous vous proposerons quelques petits exercices afin de mettre en application vos connaissances.
 
 ---
 
