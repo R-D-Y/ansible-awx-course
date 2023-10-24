@@ -57,7 +57,7 @@ Pour les environnements plus complexes ou changeants, Ansible peut utiliser des 
 
 
 
-Voici le diagramme mindmap illustrant l'introduction à Ansible:
+
 ![Introduction à Ansible](https://showme.redstarplugin.com/d/d:8azQPrPa)
 
 
@@ -143,7 +143,7 @@ Il existe d'autres commandes ad-hoc utiles telles que le ping de tous les hôtes
 
 ---
 
-Voici le diagramme de séquence illustrant l'exécution d'une commande Ad-hoc à travers Ansible:
+Commande Ad-hoc à travers Ansible:
 ![Exécution d'une commande Ad-hoc avec Ansible](https://showme.redstarplugin.com/d/d:DwAuamwV)
 
 ---
@@ -222,7 +222,7 @@ Gère les services sur les systèmes d'exploitation qui utilisent des systèmes 
 
 ---
 
-Voici le diagramme de type *mindmap* illustrant les modules Ansible et leur utilisation:
+Modules Ansible et leur utilisation:
 ![Modules Ansible](https://showme.redstarplugin.com/d/d:Ht6ADzRE)
 
 ---
@@ -293,7 +293,7 @@ ansible-playbook -i inventaire.ini installer_apache.yml
 
 ---
 
-Voici le diagramme de séquence illustrant la création et l'exécution d'un playbook Ansible avec un inventaire spécifique:
+Création et l'exécution d'un playbook Ansible avec un inventaire spécifique:
 ![Création et exécution d'un playbook Ansible avec inventaire](https://showme.redstarplugin.com/d/d:FJDX23yZ)
 
 ---
@@ -350,7 +350,7 @@ La priorité des variables est un concept important dans Ansible, car il déterm
 
 ---
 
-Voici le diagramme de type *mindmap* illustrant la gestion des variables dans Ansible:
+Gestion des variables dans Ansible:
 ![Gestion des Variables](https://showme.redstarplugin.com/d/d:XT0RWmcW)
 
 
@@ -406,7 +406,7 @@ La priorité des variables détermine quelle valeur sera utilisée si une variab
 
 ---
 
-Voici le diagramme de type *mindmap* illustrant la gestion des variables dans Ansible:
+Gestion des variables dans Ansible:
 ![Gestion des Variables](https://showme.redstarplugin.com/d/d:lOqeKh7T)
 
 
@@ -464,7 +464,7 @@ ansible-playbook mon_playbook.yml --ask-vault-pass
 
 ---
 
-Voici le diagramme de séquence illustrant le processus de chiffrement, de déchiffrement et d'utilisation des données avec Ansible Vault:
+Processus de chiffrement, de déchiffrement et d'utilisation des données avec Ansible Vault:
 ![Processus Ansible Vault](https://showme.redstarplugin.com/d/d:ujPO9chU)
 
 
@@ -580,7 +580,7 @@ Le style de codage est tout aussi important que l'organisation et les convention
 
 ---
 
-Voici le diagramme de type *mindmap* illustrant les bonnes pratiques Ansible:
+Bonnes pratiques Ansible:
 
 ![Bonnes Pratiques Ansible](https://showme.redstarplugin.com/d/d:JtpmjyMF)
 
