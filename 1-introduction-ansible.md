@@ -62,7 +62,7 @@ Pour les environnements plus complexes ou changeants, Ansible peut utiliser des 
 
 
 ---
----
+
 ### **[2] Hôtes et groupes**
 
 Dans Ansible, les **hôtes** sont les machines sur lesquelles vous souhaitez exécuter des commandes ou installer quelque chose. Les hôtes sont définis dans l'inventaire Ansible. Pour faciliter la gestion, vous pouvez regrouper plusieurs hôtes en **groupes**. Par exemple, tous vos serveurs web peuvent être regroupés sous le nom "web" et vos bases de données sous le nom "db".
@@ -146,9 +146,7 @@ Il existe d'autres commandes ad-hoc utiles telles que le ping de tous les hôtes
 Commande Ad-hoc à travers Ansible:
 ![Exécution d'une commande Ad-hoc avec Ansible](https://showme.redstarplugin.com/d/d:DwAuamwV)
 
----
----
----
+
 ---
 
 # **[3] Modules Ansible**
@@ -225,9 +223,7 @@ Gère les services sur les systèmes d'exploitation qui utilisent des systèmes 
 Modules Ansible et leur utilisation:
 ![Modules Ansible](https://showme.redstarplugin.com/d/d:Ht6ADzRE)
 
----
----
----
+
 ---
 
 # **[4]Les Playbooks**
@@ -296,9 +292,7 @@ ansible-playbook -i inventaire.ini installer_apache.yml
 Création et l'exécution d'un playbook Ansible avec un inventaire spécifique:
 ![Création et exécution d'un playbook Ansible avec inventaire](https://showme.redstarplugin.com/d/d:FJDX23yZ)
 
----
----
----
+
 ---
 
 # **[5] Gestion des Variables**
@@ -354,9 +348,7 @@ Gestion des variables dans Ansible:
 ![Gestion des Variables](https://showme.redstarplugin.com/d/d:XT0RWmcW)
 
 
----
----
----
+
 ---
 
 # **[6] Gestion des Variables**
@@ -410,9 +402,7 @@ Gestion des variables dans Ansible:
 ![Gestion des Variables](https://showme.redstarplugin.com/d/d:lOqeKh7T)
 
 
----
----
----
+
 ---
 
 # **[7] Vault Ansible**
@@ -469,9 +459,7 @@ Processus de chiffrement, de déchiffrement et d'utilisation des données avec A
 
 
 ---
----
----
----
+
 # **[8] Rôles Ansible**
 
 ---
@@ -533,9 +521,7 @@ voici un exemple au format tree, puis en diagramme:
 ![Structure d'un Rôle Ansible](https://showme.redstarplugin.com/d/d:JdyrFSvb)
 
 ---
----
----
----
+
 # **[9] Bonnes Pratiques Ansible**
 
 ---
@@ -585,9 +571,7 @@ Bonnes pratiques Ansible:
 ![Bonnes Pratiques Ansible](https://showme.redstarplugin.com/d/d:JtpmjyMF)
 
 ---
----
----
----
+
 
 # **[10] Conclusion**
 
