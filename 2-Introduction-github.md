@@ -1,4 +1,4 @@
-### **Introduction à GitHub**
+# **[1] Introduction à GitHub**
 
 ---
 
@@ -39,10 +39,9 @@ Voici le diagramme de type *mindmap* illustrant l'introduction à GitHub:
 ![Introduction à GitHub](https://showme.redstarplugin.com/d/d:xXVm4JiG)
 
 ---
----
----
 
-### **Interface Graphique de GitHub**
+
+# **[2] Interface Graphique de GitHub**
 
 ---
 
@@ -101,10 +100,9 @@ Voici le diagramme de type *mindmap* illustrant l'interface graphique de GitHub:
 ![Interface Graphique de GitHub](https://showme.redstarplugin.com/d/d:9IXcmqzH)
 
 ---
----
----
 
-### **Ligne de Commande (CLI) avec Git et GitHub**
+
+# **[3] Ligne de Commande (CLI) avec Git et GitHub**
 
 ---
 
@@ -161,9 +159,8 @@ Voici le diagramme de séquence illustrant le flux de travail avec Git et GitHub
 ![Flux de travail avec Git et GitHub](https://showme.redstarplugin.com/d/d:1mwhlZ8L)
 
 ---
----
----
-### **Bonnes Pratiques sur GitHub**
+
+# **[4] Bonnes Pratiques sur GitHub**
 
 ---
 
@@ -220,10 +217,8 @@ Voici le diagramme de type *mindmap* illustrant les bonnes pratiques sur GitHub 
 ![Bonnes Pratiques sur GitHub](https://showme.redstarplugin.com/d/d:ZxrF7C54)
 
 ---
----
----
 
-### **Sécurité et Clés SSH avec GitHub**
+# **[5] Sécurité et Clés SSH avec GitHub**
 
 ---
 
@@ -275,10 +270,8 @@ Voici le diagramme de séquence illustrant le processus de génération, d'ajout
 ![Processus SSH avec GitHub](https://showme.redstarplugin.com/d/d:gNlHBuVZ)
 
 ---
----
----
 
-### **Collaboration et Contribution avec GitHub**
+# **[6] Collaboration et Contribution avec GitHub**
 
 ---
 
@@ -324,9 +317,8 @@ Voici le diagramme de séquence illustrant le processus de forking, de création
 **La collaboration et la contribution sont au cœur de la philosophie de GitHub. En suivant ces étapes et en adoptant les bonnes pratiques, vous pouvez contribuer efficacement à des projets et assurer une qualité de code élevée.**
 
 ---
----
----
-### **Fonctionnalités Avancées de GitHub**
+
+# **[7] Fonctionnalités Avancées de GitHub**
 
 ---
 
@@ -374,11 +366,10 @@ Voici le diagramme de type "mindmap" illustrant les fonctionnalités avancées d
 **GitHub offre une multitude de fonctionnalités avancées qui permettent aux développeurs de travailler de manière plus efficace, de collaborer avec d'autres et de déployer leurs projets de manière sécurisée et fiable. Ces outils, lorsqu'ils sont utilisés correctement, peuvent grandement améliorer votre flux de travail de développement.**
 
 ---
----
----
 
 
-### **Conclusion sur GitHub**
+
+# **[8] Conclusion sur GitHub**
 
 ---
 
