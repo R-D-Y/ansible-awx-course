@@ -4,18 +4,18 @@
 
 **Qu'est-ce qu'Ansible?**
 
-Ansible est un outil d'automatisation IT open-source qui permet d'automatiser des tâches telles que la configuration de serveurs, le déploiement d'applications et la gestion de l'infrastructure. Contrairement à d'autres outils d'automatisation, Ansible est conçu pour être minimaliste et facile à utiliser. Il utilise un langage de description simple, YAML, pour définir les tâches d'automatisation.
+Ansible, c'est un outil d'automatisation IT open-source très repandue qui permet d'automatiser des tâches par exemple de la configuration de serveurs, du déploiement d'applications et de la gestion de l'infrastructure. Contrairement à d'autres outils d'automatisation, Ansible est conçu pour être minimaliste et facile à utiliser (via une logique assez simpliste de description du besoin). Il utilise un langage de description simple à lire pour l'humain,le YAML, qui permet de définir les tâches d'automatisation.
 
 - **Pourquoi utiliser Ansible?**
-  - Ansible offre une approche simple et efficace pour automatiser les tâches sans nécessiter de scripts complexes ou de langages de programmation spécialisés.
+  - Ansible offre une approche simple et efficace pour automatiser les tâches sans nécessiter de scripts complexes ou de langages de programmation spécialisés, eh oui ! seul une "description" en YAML suffit a lefaire fonctionner .
   
 - **Avantages d'Ansible**
-  - Facilité d'utilisation : Ansible utilise un langage de description simple (YAML) pour définir les tâches d'automatisation.
-  - Agentless : Contrairement à d'autres outils, Ansible n'a pas besoin d'agents installés sur les machines cibles.
-  - Extensible : Ansible dispose d'une vaste bibliothèque de modules pour gérer différents systèmes et services.
+  - Facilité d'utilisation : Ansible utilise YAML pour définir les tâches d'automatisation.
+  - Agentless : Contrairement à d'autres outils, Ansible n'a pas besoin d'agents installés sur les machines cibles, il agit depuis un serveur master qui effectue des tâches sur sa cible (il a seulement besoin d'une clé ssh, et de python).
+  - Extensible : Ansible dispose d'une vaste bibliothèque de modules pour gérer différents systèmes et services, et comme sur Docker-Hub, Ansible-Galaxy propose des rôles clé en mains créer par la communeauté.
 
 **Exemple**:
-Supposons que vous souhaitiez installer Apache sur un serveur. Avec Ansible, cela pourrait ressembler à ceci en YAML:
+Imaginons que tu souhaite installer Apache sur un serveur. Avec Ansible, ça pourrait ressembler à ceci en YAML:
 ```yaml
 ---
 - name: Installer Apache
@@ -32,16 +32,16 @@ Supposons que vous souhaitiez installer Apache sur un serveur. Avec Ansible, cel
 ### **Architecture et composants**
 
 **Nœuds de contrôle**:
-Il s'agit de la machine sur laquelle Ansible est installé et à partir de laquelle les commandes sont exécutées. Le nœud de contrôle se connecte aux nœuds gérés via SSH, sans nécessiter d'agent sur les machines distantes.
+Il s'agit de la machine sur laquelle Ansible est installé et à partir de laquelle les commandes sont exécutées, nous pouvons aussi l'appeler le Master. Le nœud de contrôle se connecte aux nœuds gérés via SSH, sans nécessiter d'agent sur les machines distantes, les cibles ont parfois besoin de python quand il est nécesssaire de faire tes tâches complexes.
 
 **Nœuds gérés**:
-Ce sont les machines sur lesquelles les tâches Ansible sont exécutées. Elles sont définies dans l'inventaire Ansible.
+Ce sont les machines sur lesquelles les tâches Ansible sont exécutées. Elles sont définies dans l'inventaire Ansible (fichier inventaire.ini par exemple).
 
 **Modules**:
-Les modules Ansible sont des unités de code qui exécutent des tâches spécifiques. Par exemple, le module `yum` est utilisé pour gérer les paquets sur les systèmes Red Hat, tandis que le module `apt` est utilisé pour les systèmes Debian.
+Les modules Ansible sont des unités de code qui exécutent des tâches spécifiques. Par exemple, le module `yum` est utilisé pour gérer les paquets sur les systèmes Red Hat, tandis que le module `apt` est utilisé pour les systèmes Debian (ils sont directement a écrire dans vos playbook, selon la distribution de votre cible).
 
 **Inventaire**:
-L'inventaire est un fichier qui contient la liste des nœuds gérés. Il peut être statique (fichier texte) ou dynamique (script ou service externe).
+L'inventaire est un fichier qui contient la liste des nœuds gérés . Il peut être statique (fichier texte) ou dynamique (script ou service externe par exemple).
 
 ---
 
@@ -51,10 +51,10 @@ L'inventaire est un fichier qui contient la liste des nœuds gérés. Il peut ê
 Dans l'inventaire, vous pouvez définir des hôtes individuels ou les regrouper pour une gestion plus facile.
 
 **Inventaires statiques**:
-Il s'agit de fichiers texte simples qui listent les nœuds gérés, généralement en format INI ou YAML.
+Fichiers texte simples qui listent les nœuds gérés, généralement en format INI ou YAML.
 
 **Inventaires dynamiques**:
-Pour les environnements plus complexes ou changeants, Ansible peut utiliser des scripts ou des services externes pour générer l'inventaire.
+Pour les environnements plus complexes ou changeants avec des varaibles, Ansible peut utiliser des scripts ou des services externes pour générer les inventaires.
 
 
 
@@ -66,21 +66,23 @@ Pour les environnements plus complexes ou changeants, Ansible peut utiliser des 
 
 ### **[2] Hôtes et groupes**
 
-Dans Ansible, les **hôtes** sont les machines sur lesquelles vous souhaitez exécuter des commandes ou installer quelque chose. Les hôtes sont définis dans l'inventaire Ansible. Pour faciliter la gestion, vous pouvez regrouper plusieurs hôtes en **groupes**. Par exemple, tous vos serveurs web peuvent être regroupés sous le nom "web" et vos bases de données sous le nom "db".
+Sur Ansible, les **hôtes**  ou *cibles* sont les machines sur lesquelles vous souhaitez exécuter des commandes ou installer des packets, applications ou autre. Les hôtes sont définis dans l'inventaire Ansible. Pour faciliter la gestion, vous pouvez regrouper plusieurs hôtes en **groupes**. Par exemple, tous vos serveurs web peuvent être regroupés sous le nom "web" et vos bases de données sous le nom "db", et ce à l'infini selon vos projet .
 
 **Exemple**:
 
-Supposons que vous ayez trois serveurs web et deux bases de données. Votre fichier d'inventaire pourrait ressembler à ceci:
+Supposons que vous ayez trois serveurs web et deux bases de données: 
 
 ```ini
 [web]
-webserver1.example.com
-webserver2.example.com
-webserver3.example.com
+webserver_a.example.com
+webserver_b.example.com
+webserver_c.example.com
 
 [db]
 dbserver1.example.com
 dbserver2.example.com
+
+#vous pouvez y mettre l'adresse IP cible mais cela n'est pas une bonne pratique, le DNS doit toujours être prioritaire !!
 ```
 
 ---
@@ -88,20 +90,20 @@ dbserver2.example.com
 ### **Inventaires statiques et dynamiques**
 
 **Inventaires statiques**:
-Il s'agit de fichiers texte simples qui listent les nœuds gérés, généralement en format INI ou YAML. Ces fichiers sont faciles à écrire et à comprendre, mais peuvent ne pas être idéaux pour des environnements dynamiques où les machines sont fréquemment ajoutées ou supprimées.
+Fichiers texte simples qui listent les nœuds gérés, généralement en format INI ou  au format YAML. Ces fichiers sont faciles à écrire et à comprendre, mais peuvent ne pas être idéaux pour des environnements dynamiques où les machines sont fréquemment ajoutées ou supprimées, pour cela, nous utilisons des Inventaires dynamiques.
 
 **Inventaires dynamiques**:
-Pour les environnements plus complexes ou changeants, Ansible peut utiliser des scripts ou des services externes pour générer l'inventaire. Par exemple, si vos serveurs sont dans AWS, un script d'inventaire dynamique peut interroger AWS pour obtenir la liste des instances EC2.
+Pour les environnements plus complexes ou changeants, Ansible peut utiliser des scripts ou des services externes pour générer l'inventaire. Par exemple, si vos serveurs sont dans AWS, un script d'inventaire dynamique peut interroger AWS pour obtenir la liste des instances EC2, puis remplir notre fichier d'inventaire à l'aide de l'output du script.
 
 ---
 
 # **Commandes Ad-hoc**
 
-Les commandes ad-hoc sont des commandes Ansible que vous pouvez exécuter de manière ponctuelle pour effectuer une tâche simple, sans écrire un playbook. Elles sont utiles pour des tâches rapides, mais pour des tâches plus complexes ou répétitives, il est préférable d'utiliser des playbooks.
+Les commandes ad-hoc... Ce sont les commandes Ansible que vous pouvez exécuter de manière ponctuelle pour effectuer une tâche simple comme faire un ping, sans écrire un playbook. Elles sont utiles pour des tâches rapides, mais pour des tâches plus complexes ou répétitives, il est préférable d'utiliser des playbooks, ou bien même un rôle !
 
 **Exemple**:
 
-Pour vérifier l'uptime de tous vos serveurs web, vous pourriez exécuter:
+Pour vérifier l'uptime de tous vos serveurs web, pas besoin de playbook, faites une commande ah-hoc:
 
 ```bash
 ansible web -i inventory.ini -m command -a "uptime"
@@ -110,19 +112,19 @@ ansible web -i inventory.ini -m command -a "uptime"
 Ici, `-i` spécifie l'inventaire, `-m` spécifie le module à utiliser (dans ce cas, "command") et `-a` spécifie les arguments à passer au module.
 
 
-Il existe d'autres commandes ad-hoc utiles telles que le ping de tous les hôtes, l'obtention d'informations sur l'espace disque, le redémarrage des serveurs, l'installation de paquets et la copie de fichiers vers des hôtes.
+Il existe d'autres commandes ad-hoc utiles comme le ping de tous les hôtes, l'obtention d'informations sur l'espace disque, le redémarrage des serveurs, l'installation de paquets et la copie de fichiers vers des hôtes.
 
 1. **Ping tous les hôtes**:
    ```bash
    ansible all -i inventory.ini -m ping
    ```
-   Cette commande vérifie la connectivité de tous les hôtes définis dans l'inventaire.
+   La commande vérifie la connectivité de tous les hôtes définis dans l'inventaire.
 
 2. **Obtenir des informations sur l'espace disque**:
    ```bash
    ansible web -i inventory.ini -m command -a "df -h"
    ```
-   Cette commande affiche l'espace disque sur tous les serveurs web.
+   La commande affiche l'espace disque sur tous les serveurs web.
 
 3. **Redémarrer tous les serveurs d'une base de données**:
    ```bash
@@ -133,13 +135,13 @@ Il existe d'autres commandes ad-hoc utiles telles que le ping de tous les hôtes
    ```bash
    ansible web -i inventory.ini -m apt -a "name=nginx state=present"
    ```
-   Cette commande installe le serveur web nginx sur tous les serveurs web qui utilisent Debian ou Ubuntu.
+   La commande installe le serveur web nginx sur tous les serveurs web qui utilisent Debian ou Ubuntu.
 
 5. **Copier un fichier vers des hôtes**:
    ```bash
    ansible web -i inventory.ini -m copy -a "src=/local/path/file.txt dest=/remote/path/file.txt"
    ```
-   Cette commande copie un fichier local vers un chemin spécifié sur les serveurs web.
+   La commande copie un fichier local vers un chemin spécifié sur les serveurs web.
 
 
 ---
@@ -157,13 +159,13 @@ Commande Ad-hoc à travers Ansible:
 #### **Présentation des modules**
 
 **Qu'est-ce qu'un module?**  
-Un module Ansible est une unité de code qui exécute une tâche spécifique. Chaque module est conçu pour être idempotent, ce qui signifie qu'il peut être exécuté plusieurs fois sans changer le résultat final, à moins que quelque chose n'ait changé sur le système cible.
+Un module Ansible est une unité de code qui exécute une tâche spécifique donné. Chaque module est conçu pour être idempotent, donc il peut être exécuté plusieurs fois sans changer le résultat final, à moins que quelque chose n'ait changé sur le système cible (OK/CHANGED/ERROR).
 
 **Pourquoi utiliser des modules?**  
-Les modules encapsulent des tâches spécifiques, fournissant une interface abstraite pour effectuer des opérations courantes. Cela signifie que vous n'avez pas besoin de connaître les détails spécifiques de la façon dont une opération est effectuée sur chaque système d'exploitation ou plateforme. Par exemple, le module `package` peut être utilisé pour installer un logiciel, que vous soyez sur un système utilisant `apt`, `yum`, ou un autre gestionnaire de paquets.
+Les modules encapsulent des tâches spécifiques, en fournissant une interface pour effectuer des opérations courantes.De ce fait, vous n'avez pas besoin de connaître les détails spécifiques de la façon dont une opération est effectuée sur chaque OS ou plateforme. Par exemple, le module `package` peut être utilisé pour installer un logiciel, que vous soyez sur un système utilisant `apt`, `yum`, ou un autre gestionnaire de paquets, cela arrivera à la même finalité, Ansible, étant intelligent va pouvoir savoir quelle commande utiliser en back-end.
 
 **Types de modules**  
-Il existe des centaines de modules Ansible pour gérer presque tous les aspects de votre environnement, des opérations de base du système d'exploitation, la gestion des services cloud, la gestion des bases de données, et bien plus encore.
+Il existe des centaines de modules Ansible pour gérer presque tous les aspects de votre environnement, des opérations de base du système d'exploitation, la gestion des services cloud, la gestion des bases de données, et bien plus encore. Comme expliqué précédemment, sur Ansible-Galaxy, vous pouvez trouver playbook, rôle et autre créer par la communeauté, et évidemment, certains modules créer par la communeauté peuvent vous servir !!
 
 ---
 
