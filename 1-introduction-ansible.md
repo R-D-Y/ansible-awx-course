@@ -159,7 +159,7 @@ Commande Ad-hoc à travers Ansible:
 #### **Présentation des modules**
 
 **Qu'est-ce qu'un module?**  
-Un module Ansible est une unité de code qui exécute une tâche spécifique donné. Chaque module est conçu pour être idempotent, donc il peut être exécuté plusieurs fois sans changer le résultat final, à moins que quelque chose n'ait changé sur le système cible (OK/CHANGED/ERROR).
+C'st une unité de code qui exécute une tâche spécifique donné. Chaque module est conçu pour être idempotent, donc il peut être exécuté plusieurs fois sans changer le résultat final, à moins que quelque chose n'ait changé sur le système cible (OK/CHANGED/ERROR).
 
 **Pourquoi utiliser des modules?**  
 Les modules encapsulent des tâches spécifiques, en fournissant une interface pour effectuer des opérations courantes.De ce fait, vous n'avez pas besoin de connaître les détails spécifiques de la façon dont une opération est effectuée sur chaque OS ou plateforme. Par exemple, le module `package` peut être utilisé pour installer un logiciel, que vous soyez sur un système utilisant `apt`, `yum`, ou un autre gestionnaire de paquets, cela arrivera à la même finalité, Ansible, étant intelligent va pouvoir savoir quelle commande utiliser en back-end.
