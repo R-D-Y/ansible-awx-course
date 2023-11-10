@@ -549,14 +549,14 @@ Bonnes pratiques Ansible:
 
 Au cours de cette session, nous avons couvert plusieurs aspects essentiels d'Ansible, notamment:
 
-- **Introduction à Ansible**: Une vue d'ensemble d'Ansible et de ses capacités.
+- **Introduction à Ansible**: Sa vue d'ensemble d'Ansible et de ses capacités.
 - **Architecture et composants**: Comprendre les éléments fondamentaux qui composent Ansible.
 - **Inventaire**: La manière dont Ansible gère et organise les hôtes.
 - **Commandes Ad-hoc**: L'exécution de commandes simples sans avoir à écrire un playbook.
 - **Modules**: Les blocs de construction utilisés pour effectuer des tâches dans Ansible.
 - **Playbooks**: Comment automatiser des tâches avec Ansible en utilisant des playbooks.
 - **Gestion des Variables**: Comment définir, utiliser et prioriser les variables.
-- **Vault Ansible**: La manière de sécuriser les données sensibles avec Ansible Vault.
+- **Vault Ansible**: S manière de sécuriser les données sensibles avec Ansible Vault.
 - **Rôles Ansible**: Comment organiser vos playbooks et réutiliser le code.
 - **Bonnes Pratiques**: Les meilleures pratiques pour écrire et organiser le code Ansible.
 
