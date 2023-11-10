@@ -15,10 +15,10 @@ Ansible, c'est un outil d'automatisation IT open-source très repandue qui perme
   - Extensible : Ansible dispose d'une vaste bibliothèque de modules pour gérer différents systèmes et services, et comme sur Docker-Hub, Ansible-Galaxy propose des rôles clé en mains créer par la communeauté.
 
 **Exemple**:
-Imaginons que tu souhaite installer Apache sur un serveur. Avec Ansible, ça pourrait ressembler à ceci en YAML:
+Imaginons que tu souhaite installer HTTPD sur un serveur. Avec Ansible, ça pourrait ressembler à ceci en YAML:
 ```yaml
 ---
-- name: Installer Apache
+- name: Installer HTTPD
   hosts: serveurs_web
   tasks:
     - name: Installer le paquet httpd
@@ -235,7 +235,7 @@ Modules Ansible et leur utilisation:
 
 #### **Structure d'un playbook**
 
-Un playbook Ansible est un fichier YAML qui définit une série de tâches à exécuter sur des hôtes cibles. Chaque playbook est composé de un ou plusieurs "plays", et chaque "play" définit un ensemble de tâches à exécuter sur un groupe d'hôtes.
+Le playbook Ansible est un fichier en YAML qui va définir une série de tâches à exécuter sur nos cibles. Chaque playbook est composé de un ou plusieurs "play". Chaque "play" définit un ensemble de tâches qui vont être à exécuter sur mon ou mes hôtes.
 
 La structure typique d'un playbook est la suivante:
 
@@ -244,7 +244,7 @@ La structure typique d'un playbook est la suivante:
 - name: Nom du play
   hosts: groupe_d_hotes
   tasks:
-    - name: Nom de la tâche
+    - name: Nom de la tâche 1 #comme exepliquer il peut y en avoir plusieurs selon le besoin
       module:
         paramètre1: valeur1
         paramètre2: valeur2
@@ -252,7 +252,7 @@ La structure typique d'un playbook est la suivante:
 
 **Exemple**:
 
-Supposons que vous souhaitiez installer Apache sur un groupe de serveurs web. Votre fichier d'inventaire `inventaire.ini` pourrait ressembler à ceci:
+Supposons que vous souhaitiez installer NIGNX sur un groupe de serveurs web. Votre fichier d'inventaire `inventaire.ini` pourrait ressembler à ceci:
 
 ```ini
 [web]
@@ -261,11 +261,11 @@ webserver2.example.com
 webserver3.example.com
 ```
 
-Et votre playbook `installer_apache.yml` serait:
+Et votre playbook `installer_NGINX.yml` serait:
 
 ```yaml
 ---
-- name: Installer Apache sur les serveurs web
+- name: Installer HTTPD sur les serveurs web
   hosts: web
   tasks:
     - name: Installer le paquet httpd
@@ -274,20 +274,21 @@ Et votre playbook `installer_apache.yml` serait:
         state: present
 ```
 
+>Nous définissons nos cible sous le groupe "web", puis dans notre playbook, nous indiquons que nos hosts seront le groupe cible.
 ---
 
 #### **Création et exécution de playbooks**
 
-**Création**:
-1. Commencez par créer un fichier avec l'extension `.yml` ou `.yaml` pour le playbook et un fichier `.ini` pour l'inventaire.
-2. Utilisez un éditeur de texte ou un IDE pour écrire votre playbook et votre inventaire en suivant les structures mentionnées ci-dessus.
+**Création**:  **Il s'agit là d'un exemple de création, il n'est pas a réaliser maintenant, des exercices viendront en fin de chapitre.**
+1. Commencez par créer un fichier `.yml` ou `.yaml` pour le playbook puis un fichier `.ini` pour l'inventaire.
+2. Utilisez un éditeur decode/texte de votre choix pour écrire votre playbook et votre inventaire en suivant les structures mentionnées ci-dessus.
 3. Sauvegardez les fichiers.
 
 **Exécution**:
 Pour exécuter un playbook en utilisant un inventaire spécifique, utilisez la commande `ansible-playbook` suivie du nom du fichier playbook et de l'option `-i` pour spécifier l'inventaire:
 
 ```bash
-ansible-playbook -i inventaire.ini installer_apache.yml
+ansible-playbook -i inventaire.ini installer_NGINX.yml
 ```
 
 ---
@@ -305,14 +306,14 @@ Création et l'exécution d'un playbook Ansible avec un inventaire spécifique:
 #### **Définition et utilisation des variables**
 
 **Qu'est-ce qu'une variable?**  
-Dans Ansible, une variable est une étiquette associée à une valeur, qui peut être utilisée pour personnaliser le comportement des playbooks et des rôles. Les variables permettent de rendre les playbooks réutilisables et de s'adapter à différents environnements ou configurations.
+Dans Ansible, une variable est une étiquette associée à une valeur, qui va généralement être utilisée pour personnaliser le comportement des playbooks et des rôles (extrmement fréquent en industrialisation). Les variables permettent de rendre les playbooks réutilisables et de s'adapter à différents environnements ou configurations. > cela permet entre-autre de ne pas avoir a modifier les playbook à la source, une bonne pratique est de créer un fichier de variables spécifique.
 
 **Comment définir une variable?**  
 Les variables peuvent être définies de plusieurs manières:
 
-- Directement dans les playbooks.
+- Directement dans les playbooks (clé-valeur).
 - Dans des fichiers d'inventaire.
-- Dans des fichiers de variables externes.
+- Dans des fichiers de variables externes (meilleur pratique pour de l'industrialisation).
 - Passées en ligne de commande lors de l'exécution d'un playbook.
 
 **Exemple**:
@@ -330,41 +331,7 @@ Les variables peuvent être définies de plusieurs manières:
         dest: /etc/httpd/conf/httpd.conf
 ```
 
-Dans cet exemple, les variables `http_port` et `max_clients` sont définies et utilisées dans le playbook.
-
----
-
-#### **Priorité des variables**
-
-La priorité des variables est un concept important dans Ansible, car il détermine quelle valeur sera utilisée si une variable est définie à plusieurs endroits.
-
-**Ordre de priorité**:
-
-1. **Variables passées en ligne de commande** : Elles ont la priorité la plus élevée.
-2. **Variables définies dans les rôles** : Ces variables ont une priorité inférieure aux variables passées en ligne de commande, mais supérieure aux variables définies dans les playbooks.
-3. **Variables définies dans les playbooks** : Elles ont une priorité inférieure aux variables définies dans les rôles.
-4. **Variables d'inventaire** : Elles ont la priorité la plus basse.
-
----
-
-Gestion des variables dans Ansible:
-![Gestion des Variables](https://showme.redstarplugin.com/d/d:XT0RWmcW)
-
-
-
----
-
-# **[6] Gestion des Variables**
-
----
-
-#### **Définition et utilisation des variables**
-
-**Qu'est-ce qu'une variable?**  
-Dans Ansible, une variable permet de stocker une valeur que vous pouvez utiliser plus tard dans votre playbook. Les variables peuvent être définies de plusieurs manières, notamment dans des fichiers d'inventaire, dans des playbooks, dans des fichiers de variables, ou même à partir de la ligne de commande.
-
-**Comment définir une variable?**  
-Les variables peuvent être définies directement dans un playbook, dans un fichier d'inventaire, ou dans un fichier de variables séparé. Par exemple, dans un playbook:
+Dans l'exemple, les variables `http_port` et `max_clients` sont définies et utilisées dans le playbook directement.
 
 ```yaml
 vars:
@@ -378,7 +345,6 @@ Ou dans un fichier d'inventaire:
 webserver1.example.com http_port=80
 ```
 
-**Utilisation des variables dans les playbooks**  
 Une fois qu'une variable est définie, elle peut être utilisée dans un playbook en l'entourant de doubles accolades `{{ }}`. Par exemple:
 
 ```yaml
@@ -388,57 +354,59 @@ Une fois qu'une variable est définie, elle peut être utilisée dans un playboo
     state: present
 ```
 
----
+
 
 #### **Priorité des variables**
 
-La priorité des variables détermine quelle valeur sera utilisée si une variable est définie à plusieurs endroits. Voici l'ordre de priorité, du plus bas au plus élevé:
+La priorité des variables est important dans Ansible, car ça détermine quelle valeur sera utilisée si une variable est définie à plusieurs endroits.
 
-1. **Variables d'inventaire**: Définies dans le fichier d'inventaire.
-2. **Variables de rôle**: Définies dans le dossier `defaults` d'un rôle.
-3. **Variables définies dans les playbooks**: Définies directement dans un playbook.
-4. **Variables passées en ligne de commande**: Définies lors de l'exécution d'un playbook à l'aide de l'option `-e`.
+**Ordre de priorité**:
 
----
-
-Gestion des variables dans Ansible:
-![Gestion des Variables](https://showme.redstarplugin.com/d/d:lOqeKh7T)
+1. **Variables passées en ligne de commande** : Elles ont la priorité la plus élevée.
+2. **Variables définies dans les rôles** : Ces variables ont une priorité inférieure aux variables passées en ligne de commande, mais supérieure aux variables définies dans les playbooks.
+3. **Variables définies dans les playbooks** : Elles ont une priorité inférieure aux variables définies dans les rôles.
+4. **Variables d'inventaire** : Elles ont la priorité la plus basse.
 
 
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/941a25ed-0d6c-4ddb-bda9-59cb0e6b209b)
 
 ---
 
-# **[7] Vault Ansible**
+
+
+
+# **[6] Vault Ansible**
 
 ---
 
 #### **Sécurisation des données sensibles avec Ansible Vault**
 
-Dans le monde de l'automatisation et de la gestion de configuration, la sécurité des données est primordiale. Ansible, conscient de cette nécessité, a introduit **Ansible Vault**. C'est un mécanisme de chiffrement qui permet de sécuriser n'importe quelle information structurée, garantissant ainsi que les données sensibles restent confidentielles même lorsqu'elles sont stockées dans un système de contrôle de version comme Git.
+Dans l'automatisation et la gestion de configuration en IT, la sécurité des données est primordiale. Ansible, conscient de cette nécessité, a introduit **Ansible Vault**: un mécanisme de chiffrement qui permet de sécuriser n'importe quelle information structurée, qui garantirra ainsi que les données sensibles restent confidentielles même lorsqu'elles sont stockées dans un système de contrôle de version comme Git.
+(c'est équivalent au Vault de HashiCorp pour les connaisseurs !!).
 
 **Pourquoi utiliser Ansible Vault?**  
-- **Confidentialité**: Ansible Vault chiffre les données à l'aide de l'algorithme AES256, garantissant que seules les personnes disposant de la clé de déchiffrement appropriée peuvent accéder aux données.
-- **Intégration transparente**: Même si les données sont chiffrées, Ansible peut les utiliser comme n'importe quel autre fichier lors de l'exécution d'un playbook, à condition que le mot de passe correct soit fourni.
-- **Flexibilité**: Vous pouvez chiffrer un fichier entier, ou simplement certaines valeurs à l'intérieur d'un fichier.
+- **Confidentialité**: Ansible Vault chiffre les données à l'aide de l'algorithme AES256, seules les personnes disposant de la clé de déchiffrement peuvent accéder aux données stockés.
+- **Intégration transparente**: Même si les données sont chiffrées, Ansible peut les utiliser comme n'importe quel autre fichier lors de l'exécution d'un playbook ou d'un rôle, à condition que le bon password soit donné
+- **Flexibilité**: Vous pouvez chiffrer un fichier entier, ou simplement certaines valeurs à l'intérieur d'un fichier. (ligne ou structure entière).
 
 ---
 
 #### **Utilisation d'Ansible Vault**
 
 **Chiffrement d'un fichier**  
-Pour chiffrer un fichier entier, utilisez la commande suivante:
+Pour chiffrer un fichier entier, utilisez la commande:
 
 ```bash
 ansible-vault encrypt mon_fichier_secret.yml
 ```
 
-Lors de l'exécution de cette commande, Ansible Vault vous demandera de fournir un mot de passe. Ce mot de passe sera nécessaire pour toutes les opérations futures sur ce fichier.
+Lors de l'exécution de cette commande, Ansible Vault vous demandera de fournir un mot de passe. Ce mot de passe sera nécessaire pour toutes les opérations futures sur ce fichier donc retenez le bien !!!
 
 **Chiffrement de valeurs spécifiques**  
 Si vous ne souhaitez chiffrer que certaines valeurs à l'intérieur d'un fichier, vous pouvez le faire avec la commande `encrypt_string`:
 
 ```bash
-ansible-vault encrypt_string 'ma_valeur_secrete' --name 'nom_de_la_variable'
+ansible-vault encrypt_string 'ma_valeur_secrete' --name 'nom_de_la_variable'  #va chiffrer seulement la chaîne de caractère souhaitée)
 ```
 
 **Déchiffrement d'un fichier**  
@@ -449,12 +417,12 @@ ansible-vault decrypt mon_fichier_secret.yml
 ```
 
 **Exécution d'un playbook contenant des données chiffrées**  
-Lors de l'exécution d'un playbook qui utilise des données chiffrées, vous devez fournir le mot de passe Vault. Il existe plusieurs méthodes pour le faire, mais la plus courante est d'utiliser l'option `--ask-vault-pass`:
+Pendant l'exécution d'un playbook qui utilise du Vault, vous devez fournir le mot de passe précédent. Il existe plusieurs méthodes pour le faire, mais la plus courante est d'utiliser l'option `--ask-vault-pass`:
 
 ```bash
 ansible-playbook mon_playbook.yml --ask-vault-pass
 ```
-
+*D'après la documentation officielle*
 ---
 
 Processus de chiffrement, de déchiffrement et d'utilisation des données avec Ansible Vault:
@@ -463,16 +431,16 @@ Processus de chiffrement, de déchiffrement et d'utilisation des données avec A
 
 ---
 
-# **[8] Rôles Ansible**
+# **[7] Rôles Ansible**
 
 ---
 
 #### **Structure d'un rôle**
 
-Un rôle Ansible est une structure pré-définie permettant d'organiser les tâches et autres données de manière logique. Il est conçu pour être entièrement autonome, ou, avec d'autres rôles, formant une unité de déploiement complète. Les rôles réduisent la duplication et facilitent la réutilisation, ce qui permet de diviser la configuration complexe en composants réutilisables.
+Un rôle Ansible est une structure pré-définie permettant d'organiser les tâches et autres données de manière logique. Il est conçu pour être entièrement autonome, ou, avec d'autres rôles, formant une unité de déploiement complète. Les rôles réduisent la duplication et facilitent la réutilisation, ce qui permet de diviser la configuration complexe en composants réutilisables, sur Ansible, il s'agit d'un point très important, les rôles c'est la vie !
 
-**Qu'est-ce qu'un rôle?**  
-Un rôle est une façon d'automatiser, de configurer et d'organiser un système. Il est composé de plusieurs composants, tels que les tâches, les gestionnaires, les fichiers, les modèles, etc., qui définissent le comportement et les états souhaités pour une machine ou un groupe de machines.
+**Qu'est-ce qu'un rôle concrètement?**  
+Un rôle est une façon d'automatiser, de configurer et d'organiser un système. Il est divisé en plusieurs composants : les tâches, les gestionnaires, les fichiers, les modèles, etc., qui définissent le comportement et les états souhaités pour une cible ou un groupe de machines.
 
 **Comment créer un rôle?**  
 Pour créer un rôle, utilisez la commande `ansible-galaxy`:
@@ -481,19 +449,19 @@ Pour créer un rôle, utilisez la commande `ansible-galaxy`:
 ansible-galaxy init nom_du_role
 ```
 
-Cette commande crée une structure de dossiers pour le rôle avec des dossiers et des fichiers prédéfinis.
+Cette commande crée une structure de dossiers pour le rôle avec des dossiers et des fichiers prédéfinis, il vous suffit de faire un `tree .` pour la visualiser.
 
 ---
 
 #### **Explication des dossiers**
 
 - **tasks**: Contient la liste principale des tâches à exécuter par le rôle.
-  - **Définition**: Les tâches sont les actions que Ansible exécutera pour atteindre un état désiré.
+  - **Définition**: Les tâches sont les actions que Ansible exécutera pour atteindre un état définit.
   - **Exemple**: Installer un paquet, démarrer un service, etc.
 
 - **handlers**: Contient des gestionnaires, qui sont des tâches déclenchées par d'autres tâches.
-  - **Définition**: Les gestionnaires sont similaires aux tâches, mais ne s'exécutent que si une tâche les notifie.
-  - **Exemple**: Redémarrer un service si un fichier de configuration a été modifié.
+  - **Définition**: Les gestionnaires sont similaires aux tâches, mais ne s'exécutent que si une tâche les notifie. (multitasking)
+  - **Exemple**: Redémarrer un service si un fichier de configuration a été modifié. (if/then)
 
 - **files**: Contient des fichiers qui doivent être déployés par le rôle.
   - **Définition**: Ces fichiers sont copiés tels quels, sans modification.
@@ -525,7 +493,7 @@ voici un exemple au format tree, puis en diagramme:
 
 ---
 
-# **[9] Bonnes Pratiques Ansible**
+# **[8] Bonnes Pratiques Ansible**
 
 ---
 
@@ -576,7 +544,7 @@ Bonnes pratiques Ansible:
 ---
 
 
-# **[10] Conclusion**
+# **[9] Conclusion**
 
 ---
 
