@@ -499,41 +499,38 @@ voici un exemple au format tree, puis en diagramme:
 
 #### **Organisation du code Ansible**
 
-L'organisation du code est essentielle pour garantir la lisibilité, la maintenabilité et la réutilisabilité du code Ansible. Voici quelques principes clés à suivre:
+L'organisation du code va être essentielle pour garantir la lisibilité, la maintenabilité et la réutilisabilité du code contenu dans tes playbooks. Alors pense à ça:
 
 - **Modularité**:
-  - **Utilisation des rôles**: Les rôles permettent de regrouper des tâches, des variables, des fichiers et d'autres éléments en une unité logique. Cela facilite la réutilisation du code et garantit que chaque rôle a une responsabilité unique.
-  - **Réutilisation du code**: Évitez de dupliquer le code. Si une tâche ou une fonction est utilisée à plusieurs endroits, envisagez de la transformer en rôle ou en tâche incluse.
+  - **Utilisation des rôles**: Les rôles vont te permettre de regrouper les tâches, les variables, les fichiers et d'autres éléments en une unité. ça facilite la réutilisation du code et garantit que chaque rôle a une responsabilité unique, ce sera donc facilement ré-utilisable.
+  - **Réutilisation du code**: Comme expliqué précédemment, évitez de dupliquer le code. Si une tâche ou une fonction est utilisée à plusieurs endroits, transforme là en rôle ou en tâche incluse.
 
 - **Clarté**:
-  - **Commentaires explicatifs**: Utilisez des commentaires pour expliquer le but de certaines tâches ou décisions. Cela aide les autres développeurs à comprendre votre code.
-  - **Éviter la complexité inutile**: Si une tâche peut être accomplie de plusieurs manières, choisissez la plus simple et la plus directe.
+  - **Commentaires explicatifs**: Utilise des commentaires pour expliquer le but de certaines tâches ou décisions, pour les rôles, met le chemin du code, dans le titre des tasks ain de savoir ou tu en ai lors du run.
+  - **Éviter la complexité inutile**: Si une tâche peut être accomplie de plusieurs manières, choisissez la plus simple et la plus directe, le but est d'avoir un code léger!!
 
 ---
 
 #### **Conventions de nommage**
 
-Les conventions de nommage aident à garantir que le code est compréhensible et cohérent.
+Les conventions de nommage vont t'aider à garantir que le code est compréhensible et cohérent.
 
 - **Variables**:
-  - **Utiliser des noms descriptifs**: Les noms de variables doivent indiquer clairement leur utilisation ou leur valeur.
+  - **Utiliser des noms descriptifs**: Les noms de variables doivent indiquer clairement leur utilisation ou leur valeur, la forme doit être sous la forme `x-x #et ce, en minuscule`.
   - **Éviter les abréviations**: Sauf si elles sont largement reconnues, évitez les abréviations pour garantir la clarté.
 
 - **Fichiers et dossiers**:
-  - **Nommage cohérent**: Assurez-vous que les fichiers et les dossiers suivent une convention de nommage cohérente.
   - **Utiliser des tirets pour séparer les mots**: Par exemple, `user-management.yml` plutôt que `usermanagement.yml`.
 
 ---
 
 #### **Style**
 
-Le style de codage est tout aussi important que l'organisation et les conventions de nommage.
+Le style de code est tout aussi important que l'organisation et les conventions de nommage.
 
 - **Indentation**:
-  - **Utiliser des espaces plutôt que des tabulations**: Cela garantit que le code est affiché de manière cohérente sur différentes plateformes et éditeurs.
+  - **Utiliser des espaces plutôt que des tabulations**: Cela garantit que le code est affiché de manière cohérente sur différentes plateformes et éditeurs (espace de 3 par 3 sur Ansible).
 
-- **Consistance**:
-  - **Garder un style cohérent à travers le projet**: Cela facilite la lecture et la compréhension du code.
 
 ---
 
