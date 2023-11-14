@@ -131,13 +131,29 @@ Créer un nouveau dépôt sur GitHub est un processus simple:
 
 #### **4. Utilisation des issues et des pull requests**
 
-- **Création d'une issue**: Les issues sont utilisées pour suivre les bugs, les demandes de fonctionnalités et d'autres tâches. Vous pouvez créer une issue, l'assigner à quelqu'un et ajouter des labels pour la catégoriser.
+- **Création d'une issue**: Les issues sont utilisées pour suivre les bugs, Si vous utiliser un projet sur github, et que vous vous rendez-compte d'un problème sur ce dernier, vous pouvez créer une issue, et expliquer votre problème au mainteneur, celui-ci, si il maintient toujours le projet, pourra la corriger, encore une fois, le collaboratif prend son sens, car des personnes tierce, ou vous-même pouvez proposer une correction au code.
 
-- **Assignation et labels**: Vous pouvez assigner des issues à des membres spécifiques de votre équipe et utiliser des labels pour catégoriser et prioriser les issues.
+  
 
-- **Création d'une pull request**: Une pull request est une demande de fusion de vos modifications dans la branche principale. Elle permet à l'équipe de revoir votre code avant qu'il ne soit fusionné.
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/78b630b2-84c4-4d67-a1c4-f8df4164fb7a)
 
-- **Review et merge de la pull request**: Une fois la pull request créée, les membres de l'équipe peuvent la revoir, la commenter et, une fois approuvée, la fusionner avec la branche principale.
+
+- **Assignation et labels**: Travaillant à plusieurs sur un projet, si je reçois des issues, je vais pouvoir désigner qui doit s'en occuper afin de répartir les taches, et je vais aussi pouvoir tagger mes issues, si il s'agit d'un bug, d'une duplication d'une demande d'aide ou autre.
+Par exemple, ci dessous, je vais attribuer l'issue à mon collègue Antoine en taggant celle-ci comme un bug, il recevra donc une notification et pourra commencer à travailler.
+
+  ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/8fa681a2-c97c-4d0c-a09d-8cdf87cf5881)
+
+
+- **Création d'une pull request**: Dans le cas ou j'ai terminé mon projet, mais que Antoine a travailler sur une nouvelle fonctionnalité, il avait créer une nouvelle branche, il a pu tester son code, il était donc fonctionnel, il demande maintenant a poussé sa nouvelle fonctionnalité en Production, il utilise pour cela un pull-request, il demande enfaite simplement de combiné son code à celui déja présent.
+
+  ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/e28ea87c-2ed5-4c66-822e-7fe7b7fb98bc)
+
+
+- **Review et merge de la pull request**: Une fois la pull request créée, les membres de moi-même ou Antoine peuvent la revoir, la commenter et, une fois approuvée, la fusionner avec la branche principale.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/aa915aaa-9616-42ec-aaaa-5c8505945606)
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/af90a1d5-2bc3-4e19-8745-297c47a525eb)
 
 ---
 
