@@ -1,5 +1,5 @@
 ### Correction - Exercice 1
-
+ 
 **Tâche** :
 La tâche consistait à écrire un fichier YAML pour décrire un animal en utilisant une indentation appropriée pour chaque niveau d'information.
 
