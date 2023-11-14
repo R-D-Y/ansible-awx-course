@@ -485,6 +485,7 @@ Pour consolider vos connaissances, il est essentiel de mettre en pratique ce que
 
 ---
 
+
 Voici le diagramme de type "mindmap" illustrant la conclusion et les points clés abordés sur GitHub :
 
 ![Conclusion GitHub](https://showme.redstarplugin.com/d/d:vq6sffLA)
