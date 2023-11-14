@@ -5,37 +5,34 @@
 
 #### **1. Qu'est-ce que GitHub?**
 
-GitHub est une plateforme de collaboration pour les développeurs qui permet d'héberger, de partager et de collaborer sur des projets de code. C'est l'une des plateformes les plus populaires pour le contrôle de version et la collaboration, permettant à plusieurs personnes de travailler ensemble sur des projets.
+GitHub est une plateforme qui va permettre d'héberger, de partager et de collaborer sur des projets de code. Il s'agit de la plateformes la plus populaire pour le contrôle de versionning et la collaboration, permettant à plusieurs personnes de travailler ensemble sur des projets. (Pour information, et de façon Open-source, il existe Gitlab qui est un Github en locale permettant de retrouver cette aspect collaboratif, ainsi que Git, permettant de faire du versionning).
 
-- **Plateforme de collaboration**: GitHub facilite la collaboration entre les développeurs. Grâce à ses fonctionnalités, comme les "pull requests" et les "issues", les équipes peuvent travailler ensemble de manière plus efficace.
-  
-- **Hébergement de code**: GitHub offre un espace pour héberger des dépôts de code, ce qui permet aux développeurs de sauvegarder, de partager et de suivre l'historique de leurs projets.
-  
-- **Intégration avec d'autres outils**: GitHub s'intègre avec de nombreux outils et services, tels que les outils de CI/CD, pour automatiser et améliorer le flux de travail de développement.
+Il facilite la collaboration entre les développeurs. Grâce à ses fonctionnalités, comme les "pull requests" et les "issues", les équipes vont pouvoir travailler ensemble de manière plus efficace, ils pourront modifier le code de leurs compère en temps réel, émèttre des commentaires, validé ou non leurs mises en applications... mais nous y reviendrons !!!
+Deplus, ils offrent un espace gratuit pour héberger vos dépôts de code, ce qui nous permet de sauvegarder et de partager nos projet, de façon publique ou privé. Enfin, Github s'intègre avec de nombreux outils et services, ou encore plugins comme des outils de CI/CD, pour automatiser et améliorer la productivité (certain produit son même directement conçu par GIthub comme Github-action qui permet de créer des workflows automatiquement).
 
 ---
 
 #### **2. Pourquoi utiliser GitHub?**
 
-Il y a plusieurs raisons pour lesquelles les développeurs et les entreprises choisissent d'utiliser GitHub:
+Beaucoup raisons.... Mais les développeurs et les entreprises choisissent d'utiliser GitHub pour certaines d'entres-elles:
 
-- **Collaboration en équipe**: GitHub facilite la collaboration en équipe en offrant des outils qui permettent aux développeurs de travailler ensemble, de discuter des modifications et de résoudre les problèmes.
+- **Collaboration en équipe**: GitHub va faciliter la collaboration en équipe en offrant des outils intégrés qui permettent aux développeurs de travailler ensemble, de discuter des modifications et de résoudre les problèmes, nous y reviendrons plus tard, mais tout est fait pour que ce soit un espace collaboratif.
 
-- **Versionnage du code**: Avec GitHub, chaque modification du code est suivie, ce qui permet aux développeurs de voir qui a fait quoi et quand. Cela facilite la détection des erreurs et la collaboration.
+- **Versionnage du code**: Avec GitHub, chaque modification du code est suivie, ce qui permet de voir qui a fait quoi et quand. ça facilite la détection des erreurs et la collaboration, nous pouvons ainsi remonter dans le temps à la modification `x` et la remettre en place ou non.
 
-- **CI/CD et automatisation**: GitHub offre des fonctionnalités d'intégration continue et de livraison continue (CI/CD) qui permettent d'automatiser le processus de test et de déploiement du code.
+- **CI/CD**: Comme expliquer précédemment, Github permet entre-autre de faire de la CICD, permettant une meilleur productivité !! la CICD peut-être apporter par Github lui-même, avec les workflow github actions, ou bien via des applications tierces qui vont directemment aller questionner github en directe.
 
 ---
 
 #### **3. Différence entre Git et GitHub**
 
-- **Git**: C'est un système de contrôle de version distribué. Il permet aux développeurs de suivre les modifications du code, de créer des branches et de fusionner ces branches. Git fonctionne localement sur l'ordinateur du développeur.
+- **Git**: C'est un système de contrôle de version distribué. Il permet de suivre les modifications du code réalisé, de créer des branches et de fusionner ces branches (branche production, branche préproduction par exemple). Git fonctionne localement sur l'ordinateur, à l'inverse de github qui est en SaaS.
 
-- **GitHub**: C'est une plateforme basée sur Git qui offre des services d'hébergement pour les dépôts Git. En plus des fonctionnalités de Git, GitHub offre des outils pour la collaboration et l'intégration avec d'autres services.
+- **GitHub**: C'est une plateforme basée sur Git qui propose en plus de  l'hébergement pour les dépôts Git. En plus des fonctionnalités de Git, GitHub offre aussi des outils pour la collaboration et l'intégration avec d'autres services.
 
 ---
 
-Voici le diagramme de type *mindmap* illustrant l'introduction à GitHub:
+
 
 ![Introduction à GitHub](https://showme.redstarplugin.com/d/d:xXVm4JiG)
 
@@ -52,11 +49,27 @@ L'interface utilisateur de GitHub est conçue pour être intuitive et conviviale
 
 - **Dashboard**: C'est la première page que vous voyez lorsque vous vous connectez à GitHub. Il affiche une vue d'ensemble de vos activités, vos dépôts, les dépôts que vous suivez, et plus encore.
 
-- **Profil utilisateur**: Votre profil montre votre photo, votre biographie, et une liste de vos dépôts. C'est également ici que vous pouvez voir vos followers et ceux que vous suivez.
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/92b4af8d-7618-472c-b36b-54778a6220c8)
+
+
+- **Profil utilisateur**: Votre profil montre votre photo, votre biographie, et une liste de vos dépôts. C'est également ici que vous pouvez voir vos followers et ceux que vous suivez, pour certains développeur, Github Agit comme un CV, il permet de montrer nos projet.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ef0b3953-7a74-4acf-aa9c-f84dfe82e5a5)
+
 
 - **Notifications**: Vous recevez des notifications pour les activités liées à vous ou aux dépôts que vous suivez, comme les issues et les pull requests.
 
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/8430428c-ff29-409a-be79-6a607c0f5a01)
+
+
 - **Paramètres**: Dans les paramètres, vous pouvez configurer votre compte, gérer votre sécurité, vos clés SSH, et d'autres préférences.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f41e146f-ee1f-4597-ab2a-0684f85ed5e6)
+
+- **Bonus: Statistique**: Vous pouvez visionnez, en bas de chaque compte Github, le taux de contribution de l'utilisateur, afin de voir si ceui-ci est actif ou non !
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/59d3eff8-49ad-4c1f-b6c2-194d51f65a67)
+
 
 ---
 
@@ -64,23 +77,55 @@ L'interface utilisateur de GitHub est conçue pour être intuitive et conviviale
 
 Créer un nouveau dépôt sur GitHub est un processus simple:
 
-- **Choix du nom**: Choisissez un nom descriptif pour votre dépôt.
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/18e69b59-79b8-47a6-baba-8a7f3cc58cb3)
+
+
+- **Choix du nom**: Choisissez un nom logique pour votre dépôt.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/be46e8e6-98b2-4a7e-b4db-f2e7fce92359)
+
   
-- **Description**: Ajoutez une brève description pour aider les autres à comprendre le but de votre dépôt.
+- **Description**: Ajoutez une brève description pour aider les autres users à comprendre le but de votre dépôt.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/0495a8ae-f6a5-4a6f-aea0-5dcb0577c6d0)
+
   
 - **Visibilité**: Vous pouvez choisir de rendre votre dépôt public (visible par tout le monde) ou privé (visible uniquement par vous et les personnes que vous invitez).
-  
-- **Initialisation avec README**: Il est recommandé d'initialiser votre dépôt avec un fichier README pour fournir des informations sur votre projet.
 
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/cff3d53b-12b7-4dc0-8265-5ef74e48f91f)
+
+  
+- **Initialisation avec README**: Il est recommandé d'initialiser votre dépôt avec un fichier README pour fournir des informations sur votre projet. Il va s'agir d'un fichier afficher par défaut dès que quelqu'un cliquera sur votre dépôt, il peut s'agir d'une description plus poussé, et de tutoriels relatif au projet que vous partager.
+
+  ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ef790dca-0bff-4694-802a-2cd34875ee8e)
+
+- **Initialisation avec .gitignore**: Cela permettra d'exclure des fichiers inutiles pour l'utilisateur qui souhaite télécharger votre projet, si par exemple vous ne souhaitez pas qu'il télécharge votre readme, vous ajouter une exception pour l'exclure.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/7b8b4ec5-b432-4431-9547-36d0dfe2fed1)
+
+
+- **Initialisation avec Licence**: vous pouvez choisir de mettre une licence sur votre projet, afin d'autorisé ou non des choses que les utilisateurs pourraient faire avec votre code.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/516b4ede-179c-495c-8637-4af87ef685f0)
+
+  
 ---
 
 #### **3. Clonage, fork et gestion des branches**
 
-- **Clonage d'un dépôt**: Le clonage vous permet de copier un dépôt sur votre machine locale. Cela est utile lorsque vous souhaitez travailler sur le code en local.
+- **Clonage d'un dépôt**: Le clonage vous permet de copier un dépot votre machine locale afin d'avoir le code disponible sans web. Vous pouvez clonner de plusieurs manières en HTTPS, en SSH, en Github CLI, ou bien même avec le client lourd GithubDesktop, et enfin dans un fichier zippé.
 
-- **Forking**: Le forking crée une copie personnelle d'un dépôt d'une autre personne. C'est utile lorsque vous souhaitez contribuer à un projet sans avoir les droits d'accès au dépôt original.
+  ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/8f87cdd7-df19-4c59-9b30-55089adfef80)
 
-- **Gestion des branches**: Les branches vous permettent de travailler sur différentes fonctionnalités ou corrections sans affecter la branche principale. Vous pouvez créer, renommer ou supprimer des branches selon vos besoins.
+
+- **Forking**: Le forking crée une copie personnelle d'un dépôt d'une autre personne. Vous allez prendre le projet d'un tiers, l'apporter dans votre dépot personnel, potentiellement apporté des modifications dessus, puis après pouvoir faire un commit afin de repousser vos modifications sur le projet de la personne tierce.
+
+  ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/1eee7052-1767-43e5-8574-07d840e15996)
+
+
+- **Gestion des branches**: Les branches vous permettent de travailler sur différentes fonctionnalités ou corrections sans affecter la branche principale. Cela vous permet de créer des environnement de developpement afin de ne pas créer des débordements d'erreur, ainsi, vous pouvez traiter vos actions step by step sans risquer de compromettre certaines partie de votre code.
+
+  ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/9c7ff4ef-c435-4caa-bb55-93880371bb00)
 
 ---
 
