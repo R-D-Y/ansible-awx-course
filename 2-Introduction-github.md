@@ -170,11 +170,12 @@ Voici le diagramme de type *mindmap* illustrant l'interface graphique de GitHub:
 
 #### **1. Installation et configuration de Git**
 
-Avant de commencer à utiliser Git et GitHub via la ligne de commande, il est essentiel d'installer et de configurer Git sur votre machine.
+Avant de commencer à utiliser Git et GitHub via la ligne de commande, Il faut commencer par l'installer en local !
 
-- **Installation**: Selon votre système d'exploitation (Windows, macOS, Linux), la procédure d'installation peut varier. Vous pouvez télécharger Git depuis le [site officiel de Git](https://git-scm.com/).
+**Installation**: Selon ton système d'exploitation (Windows, Linux), la procédure d'installation va varier. tu peux télécharger Git depuis le [site officiel de Git](https://git-scm.com/).
 
-- **Configuration**: Une fois Git installé, il est recommandé de configurer votre nom d'utilisateur et votre adresse e-mail. Ces informations seront utilisées pour chaque commit que vous effectuez.
+- **Configuration**: Une fois Git installé, configurer votre nom d'utilisateur et votre adresse e-mail github. elle permettrons de relier tes actions à ton compte.
+  
   ```bash
   git config --global user.name "Votre Nom"
   git config --global user.email "votre.email@example.com"
@@ -184,7 +185,10 @@ Avant de commencer à utiliser Git et GitHub via la ligne de commande, il est es
 
 #### **2. Commandes de base**
 
-- **`git clone [URL]`**: Cette commande permet de cloner (copier) un dépôt depuis GitHub vers votre machine locale.
+- **`git clone [URL]`**: Permet de cloner (copier) un dépôt depuis GitHub vers votre machine locale. Tu te retrouvera donc avec les fichiers/Dossier du projet
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/1f72d959-6e1a-4a27-aa55-e1ce19737ca3)
+
 
 - **`git add [fichier]`**: Ajoutez des fichiers à l'index pour les préparer pour le prochain commit.
 
@@ -228,25 +232,29 @@ Voici le diagramme de séquence illustrant le flux de travail avec Git et GitHub
 
 #### **1. Nommage des dépôts et des branches**
 
-Le nommage est crucial pour la lisibilité et la maintenance de vos projets. Voici quelques recommandations pour nommer vos dépôts et branches :
+Le nommage est important afin de mieux gérer les projets. Je te donne ici quelques tips!
 
-- **Descriptif et concis** : Le nom doit refléter le contenu ou la fonction du dépôt/branche.
+- **Descriptif et concis** : Le nom doit refléter le contenu ou la fonction du dépôt/branche comme par exemple `maquette` pour dire que c'est la branche de maquette, ou encore par un nom de fonctionnalité que tu t'apprête à créer : branche `compteur-de-temps`.
   
-- **Éviter les noms génériques** : Des noms comme "test" ou "nouveau" ne sont pas informatifs. Optez pour des noms qui donnent un aperçu du contenu.
+- **Éviter les noms génériques** : Les noms comme "test" ou "nouveau" ne sont pas dutout informatifs. Optez pour des noms qui donnent un aperçu du contenu, sans aller dans la branche, vous devez avoir une idée de ce qu'elle contient.
   
-- **Utiliser des tirets pour séparer les mots** : Par exemple, "documentation-api" est préférable à "documentationAPI" ou "documentation_api".
+- **Utiliser des tirets pour séparer les mots, et sans ponctuation, ni majuscules** : Comme, "documentation-awx" sera préférable à "documentationAWX" ou "Documentation_Awx".
 
 ---
 
 #### **2. Utilisation des messages de commit descriptifs**
 
-Un bon message de commit facilite la compréhension de l'historique du projet :
+Un bon message de commit va faciliter la compréhension de l'historique du projet, et évidemment aider ton collègue qui passera derrière toi :
 
-- **Commencer par un verbe d'action** : Par exemple, "Ajoute la fonctionnalité X" ou "Corrige le bug Y".
+- **Commencer par un verbe d'action** : Par exemple, "Creation la fonctionnalité X" ou "Isolement du bug Y".
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/619a2a9d-d9db-42be-9cca-8838373bfa92)
+
   
-- **Limiter à 50 caractères pour le titre** : Si vous avez besoin de fournir plus de détails, utilisez le corps du message de commit.
-  
-- **Utiliser le corps pour des détails** : Fournissez des informations supplémentaires sur ce que fait le commit et pourquoi.
+- **Limiter à 50 caractères pour le titre** : Si vous avez besoin d'écrire plus de détails, privilégié le corps du message de commit. Fournissez des informations supplémentaires sur ce que fait le commit et pourquoi.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/49a8f872-9f15-4504-95ca-f8506f3310dc)
+
 
 ---
 
