@@ -260,29 +260,31 @@ Un bon message de commit va faciliter la compréhension de l'historique du proje
 
 #### **3. Gestion des branches**
 
-La gestion efficace des branches est essentielle pour un développement fluide :
+La gestion efficace des branches est essentielle pour le bon développement d'un projet :
 
-- **Feature branching** : Créez une branche pour chaque nouvelle fonctionnalité ou correction. Cela permet de travailler sur des éléments spécifiques sans perturber la branche principale.
+- **Feature branching** : Créez une branche pour chaque nouvelle fonctionnalité a ajouter ou modifier. Cela va permettre de travailler sur des éléments spécifiques sans perturber la branche principale qui est généralement la production.
   
-- **Git flow** : C'est un modèle de workflow standardisé qui définit une structure de branches pour les fonctionnalités, les corrections, les versions, etc.
+- **Git flow** : C'est un modèle de workflow standardisé qui définit une structure de branches pour vos fonctionnalités, les corrections, les versions, etc. plus d'info ici > https://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html
   
-- **Ne jamais travailler directement sur la branche 'master'** : La branche 'master' doit toujours être stable. Toutes les nouvelles fonctionnalités ou corrections doivent être développées dans des branches séparées et ensuite fusionnées dans 'master' après révision.
-
+- **Ne jamais travailler directement sur la branche 'master'** : Comme expliqué précédemment, la branche 'master' doit toujours être stable et aucune opération ne dois être faite sur cette dernière. Donc je le répète, vous souhaité créer une nouvelle fonctionnalité, ou modifier la principale, créer une nouvelle branche, modifier, et pusher !! 
 ---
 
-#### **4. Utilisation des labels et des milestones**
+#### **4. Utilisation des labels et des milestones (TAG)**
 
 Les labels et les milestones aident à organiser et à prioriser le travail :
 
-- **Catégoriser les issues** : Utilisez des labels pour indiquer le type d'issue (bug, fonctionnalité, amélioration, etc.).
+- **Catégoriser les issues** : Utilisez des labels pour indiquer le type d'issue (bug, fonctionnalité, amélioration, etc.) cela doit permettre de savoir quelle type de tâche sera attribué au contributeur.
   
-- **Prioriser les tâches** : Les milestones peuvent être utilisés pour regrouper des issues liées à une version ou à une étape spécifique du projet.
+- **Prioriser les tâches** : Les milestones peuvent être utilisés pour regrouper des issues liées à une version ou à une étape spécifique du projet, par exemple, il y aura une priorité sur la correction d'un bug, plutôt que de créer une nouvelle fonctionnalité ! dans ce cas, vous pouvez priorisé certaines issues.
   
-- **Suivre l'avancement du projet** : Les milestones fournissent une vue d'ensemble de l'avancement vers un objectif particulier.
+- **Suivre l'avancement du projet** : Les milestones fournissent une vue d'ensemble de l'avancement vers un objectif particulier, vous avez d'ailleur, sur Github, le mode projet qui va vous permettre d'avoir une vue d'ensemble sur l'avancement du projet, savoir qui doit faire quoi, ainsi que l'état d'avancement de ce dernier (tâche par tâche ou bien global au projet).
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/c5cb4094-5091-404d-a551-7b5a771f2902)
+
 
 ---
 
-Voici le diagramme de type *mindmap* illustrant les bonnes pratiques sur GitHub :
+Voici le diagramme de type illustrant les bonnes pratiques sur GitHub :
 
 ![Bonnes Pratiques sur GitHub](https://showme.redstarplugin.com/d/d:ZxrF7C54)
 
@@ -294,48 +296,78 @@ Voici le diagramme de type *mindmap* illustrant les bonnes pratiques sur GitHub 
 
 #### **1. Qu'est-ce qu'une clé SSH et pourquoi l'utiliser?**
 
-SSH, ou Secure SHell, est un protocole qui permet d'établir une communication sécurisée entre deux systèmes. Dans le contexte de GitHub, les clés SSH sont utilisées pour établir une connexion sécurisée entre votre ordinateur local et GitHub, sans avoir besoin de saisir votre mot de passe à chaque fois.
+SSH est un protocole qui permet d'établir une communication sécurisée entre deux systèmes. Dans le contexte de GitHub, les clés SSH sont utilisées pour établir une connexion sécurisée entre votre ordinateur local et GitHub, sans avoir besoin de saisir votre mot de passe à chaque fois, dans le cas de notre projet, Nous avons par exemple un échange de clé entre le VM_NODE et le VM_MASTER, afin que le master puisse réalisé des actions sur le NODE sans avoir a tapper de mot de passe. our information, le port SSH est le 22 ! mais vous devez le savoir ahah
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/c6e94d4f-e22a-4014-bfd5-c3e4e9fda5a0)
+
 
 **Avantages de l'utilisation des clés SSH** :
-- **Sécurité renforcée** : Les clés SSH offrent un niveau de sécurité plus élevé que les mots de passe simples.
-- **Authentification sans mot de passe** : Une fois la clé SSH configurée, vous n'avez pas besoin de saisir votre mot de passe à chaque fois que vous interagissez avec GitHub.
-- **Automatisation** : Les clés SSH sont essentielles pour les scripts et les automatisations qui nécessitent des interactions fréquentes avec les dépôts.
+- **Sécurité renforcée** : Les clés SSH offrent un niveau de sécurité plus élevé que les mots de passe simples, composé de beaucoup plus de caractère évidemment, ainsi qu'un count-retry qui permet de bloquer les tentatives de *brutforce*.
+- **Authentification sans mot de passe** : Une fois la clé SSH configurée, vous n'avez pas besoin de saisir votre mot de passe à chaque fois que vous interagissez avec GitHub, le lien est réalisé par SSH qui vérifie la clé.
+- **Automatisation** : Les clés SSH sont essentielles pour les scripts et les automatisations qui nécessitent des interactions fréquentes avec les dépôts, 99.99% sont effectuer comme cela :) .
 
 ---
 
 #### **2. Génération et ajout d'une clé SSH à GitHub**
 
 **Génération d'une clé SSH** :
-1. Ouvrez un terminal ou une invite de commande.
+1. Ouvrez un terminal ou une invite de commande (sur la VM_MASTER en l'occurence).
 2. Tapez la commande suivante pour générer une nouvelle paire de clés SSH (clé privée et clé publique) :
    ```bash
    ssh-keygen -t rsa -b 4096 -C "votre.email@example.com"
    ```
-3. Suivez les instructions à l'écran pour choisir un emplacement pour les clés et, éventuellement, un mot de passe pour sécuriser la clé privée.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/49262ba8-4e55-417b-910c-bddb242fd407)
+
+
+   
+3. Suivez les instructions à l'écran pour choisir un emplacement pour les clés et, éventuellement, (un mot de passe pour sécuriser la clé privée).
 
 **Ajout de la clé publique à GitHub** :
-1. Ouvrez le fichier contenant la clé publique (généralement `~/.ssh/id_rsa.pub`) dans un éditeur de texte et copiez son contenu.
-2. Connectez-vous à votre compte GitHub et accédez à **Settings** > **SSH and GPG keys**.
-3. Cliquez sur **New SSH key**, donnez un titre à votre clé et collez le contenu de la clé publique dans le champ prévu à cet effet.
-4. Cliquez sur **Add SSH key** pour ajouter la clé à votre compte GitHub.
+1. Ouvre le fichier contenant la clé publique (généralement dans `~/.ssh/id_rsa.pub`) et copie son contenu (tu peux faire un `CAT` dessus).
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ae10c6b0-c1bf-4544-b475-651daa3bf4d6)
+
+   
+3. Connectez-vous à votre compte GitHub et accédez à **Settings** > **SSH and GPG keys**.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/8ecbd928-a459-47e8-b4a3-e85e36821b86)
+
+   
+5. Cliquez sur **New SSH key**, donnez un titre à votre clé (nom du pc par exemple) et collez le contenu de la clé publique dans le champ prévu à cet effet.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f950e515-591f-4160-b64a-f66f89b2a314)
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/5c9ae7eb-219d-4896-83a9-43d4892ade04)
+
+
+6. Cliquez sur **Add SSH key** pour ajouter la clé à votre compte GitHub.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/0ac0e69d-19ac-4865-bffb-90daa3e0e367)
+
 
 ---
 
 #### **3. Clonage et push avec SSH**
 
-Une fois votre clé SSH ajoutée à GitHub, vous pouvez cloner des dépôts et pousser des modifications en utilisant SSH au lieu de HTTPS.
+Une fois votre clé SSH ajoutée à GitHub, vous pouvez cloner des dépôts et pousser des modifications en utilisant SSH au lieu de HTTPS, donc beaucoup plus simple. Plus besoin de renseigner de mot de passe, tout passera par SSH, tu pourra télécharger du code, pousser du code, faire des modifications.... En bref, tout ce qui était faisable depuis le GUI pourra être fait depuis ton p'tit terminal !
 
 **Clonage d'un dépôt avec SSH** :
 ```bash
 git clone git@github.com:NomUtilisateur/NomDepot.git
 ```
 
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/e14fff04-b15e-4a2b-9c30-8571fd176159)
+
+
 **Push des modifications avec SSH** :
-Après avoir effectué vos commits localement, vous pouvez pousser vos modifications vers GitHub en utilisant SSH. La commande reste la même (`git push`), mais la connexion est établie via SSH.
+Après avoir effectué vos commits localement, tu peux pousser tes modifications vers GitHub en utilisant SSH. La commande reste la même (`git push`), mais la connexion est établie via SSH, plus besoin d'interface graphique !
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f2e2a08d-f1af-4cbb-bb93-7fdafccca188)
+
 
 ---
 
-Voici le diagramme de séquence illustrant le processus de génération, d'ajout d'une clé SSH à GitHub, et d'interaction avec GitHub via SSH :
+Voici le diagramme du processus de génération, d'ajout d'une clé SSH à GitHub, et d'interaction avec GitHub via SSH :
 
 ![Processus SSH avec GitHub](https://showme.redstarplugin.com/d/d:gNlHBuVZ)
 
