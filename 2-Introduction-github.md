@@ -206,7 +206,7 @@ Avant de commencer à utiliser Git et GitHub via la ligne de commande, Il faut c
 
 #### **3. Création et gestion de dépôts via CLI**
 
-- **`git init`**: Initialisez un nouveau dépôt Git dans votre répertoire actuel. Cela crée un nouveau sous-répertoire `.git` qui contient tous les fichiers nécessaires pour le dépôt.
+- **`git init`**: Initialisez un nouveau dépôt Git, dans votre répertoire actuel. Cela crée un nouveau sous-répertoire `.git` qui contient tous les fichiers nécessaires pour le dépôt.
 
 - **Ajout d'un dépôt distant**: Une fois que vous avez initialisé un dépôt local, vous pouvez le lier à un dépôt distant sur GitHub en utilisant la commande:
   ```bash
