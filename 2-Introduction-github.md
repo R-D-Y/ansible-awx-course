@@ -8,7 +8,7 @@
 GitHub est une plateforme qui va permettre d'héberger, de partager et de collaborer sur des projets de code. Il s'agit de la plateformes la plus populaire pour le contrôle de versionning et la collaboration, permettant à plusieurs personnes de travailler ensemble sur des projets. (Pour information, et de façon Open-source, il existe Gitlab qui est un Github en locale permettant de retrouver cette aspect collaboratif, ainsi que Git, permettant de faire du versionning).
 
 Il facilite la collaboration entre les développeurs. Grâce à ses fonctionnalités, comme les "pull requests" et les "issues", les équipes vont pouvoir travailler ensemble de manière plus efficace, ils pourront modifier le code de leurs compère en temps réel, émèttre des commentaires, validé ou non leurs mises en applications... mais nous y reviendrons !!!
-Deplus, ils offrent un espace gratuit pour héberger vos dépôts de code, ce qui nous permet de sauvegarder et de partager nos projet, de façon publique ou privé. Enfin, Github s'intègre avec de nombreux outils et services, ou encore plugins comme des outils de CI/CD, pour automatiser et améliorer la productivité (certain produit son même directement conçu par GIthub comme Github-action qui permet de créer des workflows automatiquement).
+Deplus, ils offrent un espace gratuit pour héberger tes dépôts de code, ce qui nous permet de sauvegarder et de partager nos projet, de façon publique ou privé. Enfin, Github s'intègre avec de nombreux outils et services, ou encore plugins comme des outils de CI/CD, pour automatiser et améliorer la productivité (certain produit son même directement conçu par GIthub comme Github-action qui permet de créer des workflows automatiquement).
 
 ---
 
@@ -47,12 +47,12 @@ Beaucoup raisons.... Mais les développeurs et les entreprises choisissent d'uti
 
 L'interface utilisateur de GitHub est conçue pour être intuitive et conviviale. Voici quelques éléments clés de l'interface:
 
-- **Dashboard**: C'est la première page que vous voyez lorsque vous vous connectez à GitHub. Il affiche une vue d'ensemble de vos activités, vos dépôts, les dépôts que vous suivez, et plus encore.
+- **Dashboard**: C'est la première page que tu vois lorsque tu te connecte à GitHub. Il affiche une vue d'ensemble des activités, des dépôts personnels, des dépôts que tu suis (stars), et plus encore.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/92b4af8d-7618-472c-b36b-54778a6220c8)
 
 
-- **Profil utilisateur**: Votre profil montre votre photo, votre biographie, et une liste de vos dépôts. C'est également ici que vous pouvez voir vos followers et ceux que vous suivez, pour certains développeur, Github Agit comme un CV, il permet de montrer nos projet.
+- **Profil utilisateur**: Ton profil montre ta photo, ta biographie, et une liste de tes dépôts. Pour certains développeur, Github Agit comme un CV, il permet de montrer leurs projets.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ef0b3953-7a74-4acf-aa9c-f84dfe82e5a5)
 
@@ -62,7 +62,7 @@ L'interface utilisateur de GitHub est conçue pour être intuitive et conviviale
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/8430428c-ff29-409a-be79-6a607c0f5a01)
 
 
-- **Paramètres**: Dans les paramètres, vous pouvez configurer votre compte, gérer votre sécurité, vos clés SSH, et d'autres préférences.
+- **Paramètres**: Dans les paramètres, tu peux configurer ton compte, gérer sa sécurité, tes clés SSH, et d'autres préférences.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f41e146f-ee1f-4597-ab2a-0684f85ed5e6)
 
@@ -463,7 +463,7 @@ Processus de forking, de création de pull requests, de gestion des conflits et 
 
 **GitHub Actions** est un outil d'automatisation clé en main qui permet de définir des workflows personnalisés pour créer une pipeline directement depuis votre dépôt GitHub. En d'autre terme, Github action permet de faire de la CI/CD...
 
-![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/4ed736b4-edb2-4115-b019-37033ae5e75a)
+ <a href="url"><img src="https://github.com/R-D-Y/ansible-awx-course/assets/102509252/4ed736b4-edb2-4115-b019-37033ae5e75a" height="45%" width="45%" ></a>
 
 - **CI (Intégration Continue)** : C'est le fait d'automatiser le processus de vérification de chaque modification apportée au code source (vous vous souvenez ? les merges ?), en exécutant un ensemble de tests pour s'assurer que le code est correct. Il va permmettre de valider le fait que la modification que vous avez apporté n'impacte pas l'environnement de production !
 
@@ -477,7 +477,13 @@ Processus de forking, de création de pull requests, de gestion des conflits et 
 
 **GitHub Pages** est un service d'hébergement gratuit qui prend votre code HTML, CSS et JavaScript, construit à partir d'un dépôt GitHub, et le transforme en un site web... et oui, Github stock du code, mais pas que ! tu peux aussi t'en servir pour héberger ton site web et ce de façon gratuite, parfait pour faire un petit blog!
 
-![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/54c4e68f-3fc3-45c4-86bc-e37499a7d857)
+
+
+ <a href="url"><img src="https://github.com/R-D-Y/ansible-awx-course/assets/102509252/54c4e68f-3fc3-45c4-86bc-e37499a7d857" height="30%" width="30%" ></a>
+
+
+
+
 
 - **Personnalisation des thèmes** : GitHub Pages supporte Jekyll, ce qui signifie que tu peux personnaliser l'apparence de ton site en choisissant parmi les thèmes disponibles ou en créant le vôtre, parfait si tu n'est pas un expert du front-end. (pour information Jekyll est un générateur de site statique! comme Wordpress!).
 
@@ -507,7 +513,7 @@ Les fonctionnalités avancées de GitHub :
 ![Fonctionnalités Avancées GitHub](https://showme.redstarplugin.com/d/d:HzGXSzbA)
 
 
-*GitHub va offrire énormément fonctionnalités avancées qui permettent qui permettent de travailler de manière plus efficace, de collaborer avec d'autres et de déployer des projets de manière sécurisée et fiable et surtout, très rapide. Ces outils, lorsqu'ils sont utilisés correctement et ensemble, peuvent grandement améliorer la productivité des équipes. Il s'agît de la raison principale pour laquelle Github, combinés à ses fonctionnalités, font qu'ils sont leaders sur ce marché.*
+*GitHub va offrire énormément fonctionnalités avancées qui permettent qui permettent de travailler de manière plus efficace, de collaborer avec d'autres et de déployer des projets de manière sécurisée et fiable et surtout, très rapidement. Ces outils, lorsqu'ils sont utilisés correctement et ensemble, peuvent grandement améliorer la productivité des équipes. Il s'agît de la raison principale pour laquelle Github, combinés à ses fonctionnalités, font qu'ils sont leaders sur ce marché.*
 
 ---
 
@@ -519,41 +525,42 @@ Les fonctionnalités avancées de GitHub :
 
 #### **1. Résumé des points clés**
 
-Au cours de cette session, nous avons exploré en profondeur les différentes facettes de GitHub :
+Au cours de cette session, nous avons exploré en profondeur les différentes facettes de GitHub !
 
-- **Introduction à GitHub** : Nous avons découvert ce qu'est GitHub, pourquoi il est essentiel pour les développeurs et comment il se distingue de Git.
+- **Introduction à GitHub** : Nous avons découvert ce qu'est GitHub, pourquoi il est essentiel pour travailler en équipe et comment il se distingue de Git.
 
-- **Interface Graphique** : Nous avons navigué à travers l'interface utilisateur de GitHub, appris à créer des dépôts, à gérer des branches, et à utiliser des fonctionnalités telles que les issues et les pull requests.
+- **Interface Graphique** : Nous avons navigué à travers l'interface utilisateur de GitHub, afin de comprendre ce qui était possible de faire à partir de l'interface web, et pris connaissance des utilisations de base de ce dernier.
 
-- **Ligne de Commande (CLI)** : Nous avons abordé les commandes Git essentielles pour la gestion des dépôts, des commits, des branches, et bien plus encore.
+- **Github CLI** : Nous avons abordé les commandes Git essentielles pour la gestion des dépôts (git & push), des commits, des branches, et bien plus encore...
 
-- **Bonnes Pratiques** : Nous avons discuté des meilleures méthodes pour nommer les dépôts, gérer les branches, et utiliser des messages de commit descriptifs.
+- **Bonnes Pratiques** : Nous avons discuté des méthodes de bonens pratiques pour une bonne utilisation de cet outil, de façon productive et sécurisé.
 
-- **Sécurité et Clés SSH** : Nous avons exploré l'importance des clés SSH pour une connexion sécurisée et comment les configurer avec GitHub.
+- **Sécurité & Clés SSH** : Point de vue sur l'importance des clés SSH : pour une connexion sécurisée et surtout plus simple ! 
 
-- **Collaboration et Contribution** : Nous avons appris comment collaborer efficacement avec d'autres développeurs, gérer les conflits, et contribuer à des projets open source.
-
-- **Fonctionnalités Avancées** : Nous avons découvert des outils puissants tels que GitHub Actions, GitHub Pages, et GitHub Packages.
+- **Collaboration et Contribution** : Nous avons appris comment collaborer efficacement avec d'autres, savoir gérer les conflits, et appris la manière dont nous pouvions contribuer à des projets autant en interne, qu'en Open-Source!
+  
+- **Fonctionnalités Avancées** : Nous avons découvert quelques outils proposés par Github tels que GitHub Actions, GitHub Pages, et GitHub Packages. (Il en existe encore beaucoup croyez-moi!).
 
 ---
 
-#### **2. Ressources pour aller plus loin**
+#### **2. Pour aller plus loin...**
 
-Pour approfondir vos connaissances sur GitHub, voici quelques ressources utiles :
+Pour approfondir tes connaissances sur GitHub, voici quelques ressources utiles :
 
-- **Documentation officielle** : La [documentation de GitHub](https://docs.github.com/) est une ressource inestimable pour comprendre toutes les fonctionnalités de la plateforme.
-- **Vidéos Youtube** : Beaucoup de vidéastes spécialisés en informatique mettent en oeuvre beaucoup de tuto sur Github, même si ce cours servira amplement, rien ne vous empêche de faire de la veille à ce sujet :). 
+- **Documentation officielle et blog** : La [documentation de GitHub](https://docs.github.com/) est une ressource inestimable pour comprendre toutes les fonctionnalités de la plateforme. Pour des sujets peut-être spécifique, ou des mises en oeuvre concrète, je te conseil le blog de [Stéphane Robert](https://blog.stephane-robert.info/) qui m'a aidé plus d'une fois!
+- **Vidéos Youtube** : Beaucoup de vidéastes spécialisés en informatique mettent en oeuvre beaucoup de tuto sur Github, même si ce cours servira amplement, rien ne vous empêche de faire de la veille à ce sujet :).
+- **Des soucis ?** : Github, ayant une large communeauté, vous n'aurez aucun mal à trouver de l'aide, sur le [forum interne](https://github.com/topics/forums) ou encore sur [stackoverflow](https://stackoverflow.com/). 
 ---
 
 #### **3. GitLab**
 
-Alors que nous avons principalement discuté de GitHub, il est également important de mentionner **GitLab**, une autre plateforme populaire de gestion de code source. GitLab offre des fonctionnalités similaires à GitHub mais se distingue par certaines fonctionnalités supplémentaires, notamment une intégration CI/CD native. Si vous êtes intéressé par la comparaison entre GitHub et GitLab, il serait bénéfique d'explorer GitLab par vous-même.
+Alors que nous avons principalement discuté de GitHub dans ce cours, il est également important de mentionner **GitLab**, c'est une autre plateforme populaire de gestion de code source. GitLab offre des fonctionnalités similaires à GitHub mais se distingue par certaines fonctionnalités, Gitlab est un projet Open-Source et donc gratuit, et ce dernier peut-être installer en local. Sur ce même sujet, il nest pas rare en entreprise d'utiliser Gitlab et github, car sans accès web, Gitlab est un bon remède, parfait pour des serveurs qui n'ont pas d'accès web pour des raisons de sécurités, ceux-ci peuvent par exemple aller chercher des sources sur Gitlab! C'est un autre sujet, nous n'en n'aurons pas besoin pour notre projet, mais n'hésitez pas à vous renseigner à ce sujet.
 
 ---
 
 #### **4. Exercices pratiques**
 
-Pour consolider vos connaissances, il est essentiel de mettre en pratique ce que vous avez appris. Dans la section suivante, nous allons proposer quelques exercices pratiques pour tester et renforcer vos compétences sur GitHub.
+Pour consolider tes connaissances, il est essentiel de mettre en pratique ce que nous avons pu t'apprendre. Dans la section suivante, nous allons proposer quelques exercices pratiques pour tester et renforcer tes compétences sur GitHub.
 
 ---
 
