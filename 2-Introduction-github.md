@@ -367,7 +367,7 @@ Après avoir effectué vos commits localement, tu peux pousser tes modifications
 
 ---
 
-Voici le diagramme du processus de génération, d'ajout d'une clé SSH à GitHub, et d'interaction avec GitHub via SSH :
+Diagramme du processus de génération, d'ajout d'une clé SSH à GitHub, et d'interaction avec GitHub via SSH :
 
 ![Processus SSH avec GitHub](https://showme.redstarplugin.com/d/d:gNlHBuVZ)
 
@@ -379,44 +379,79 @@ Voici le diagramme du processus de génération, d'ajout d'une clé SSH à GitHu
 
 #### **1. Forking et création de pull requests**
 
-Le processus de "forking" est une méthode courante pour contribuer à des projets open source sur GitHub. Il vous permet de créer une copie personnelle d'un dépôt sur votre propre compte, d'y apporter des modifications, puis de proposer ces modifications au dépôt original via une "pull request".
+Le processus de "forking" est une méthode très utilisé pour la contribution dans les projets. Il vous permet de créer une copie d'un projet externe sur notre propre compte GitHub, d'y apporter des modifications, puis de proposer ces modifications au dépôt original via une "pull request".
 
 **Étapes pour forker un dépôt et créer une pull request** :
-1. **Forker le dépôt** : Cliquez sur le bouton "Fork" en haut à droite de la page du dépôt que vous souhaitez contribuer. Cela créera une copie du dépôt sur votre compte GitHub.
-2. **Clonez votre fork** : Clonez le dépôt forké sur votre machine locale pour y apporter des modifications.
-3. **Apportez vos modifications** : Une fois que vous avez apporté vos modifications, committez-les et poussez-les vers votre fork sur GitHub.
-4. **Créez une pull request** : Retournez à la page du dépôt original et cliquez sur "New Pull Request". Sélectionnez votre fork et la branche sur laquelle vous avez travaillé, puis soumettez la pull request.
+1. **Forker le dépôt** : Cliquez sur le bouton "Fork" en haut à droite de la page du dépôt que vous souhaitez contribuer. Cela créera une copie du dépôt sur votre compte GitHub (je prend par exemple le projet de mon collègue Bochi auquel je souhaite apporter une modification.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/38246d3b-74b9-4dc6-9734-d5e9ab4d9f75)
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/3057d273-7d83-41fb-bf9c-b7162eab5b01)
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/3b780722-92d2-4fd9-bbea-7b5941b763b5)
+
+et voilà, je me retrouve avec le projet de Bochi, sur mon compte github ! 
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/cbcb3836-e178-4838-98bd-c2cd616e4c1f)
+
+
+3. **Clonez votre fork** : Clonez le dépôt forké sur votre machine locale pour y apporter des modifications, comme appris précédemment, je vais le cloner pour qu'il se retrouve en local sur mon poste avec la commande `git clone git@github.com:R-D-Y/NomDuProjet.git`.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f13be424-7d8c-4e3c-a46c-89ef95f570c1)
+
+   
+5. **Apportez vos modifications** : Une fois le projet en local, libre à vous d'apporter les options souhaités!
+
+
+   
+7. **Créez une pull request** : Retournez à la page du dépôt original et cliquez sur "New Pull Request". Sélectionnez votre fork et la branche sur laquelle vous avez travaillé, puis soumettez la pull request !! 
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/509caa61-7e0e-4202-9a46-d283edc94ab7)
+
+8. **Usage perso ??** : Et oui, après votre forks, si la modification que vous avez apporter, est strictement personnel à votre infrastructure, et n'aura aucun plus pour les autres, vous n'êtes évidemment pas obligé de soumettre un pull request, cette dernière sert uniquement à contribué à un projet, afin de pousser vos modifications pour les autres :) .
 
 ---
 
 #### **2. Gestion des conflits**
 
-Lorsque plusieurs personnes travaillent sur le même code, des conflits peuvent survenir. GitHub fournit des outils pour identifier et résoudre ces conflits.
+Lorsque plusieurs personnes travaillent sur le même code, évidemment, des conflits peuvent survenir. GitHub fournit donc des outils pour identifier et résoudre ces derniers !
 
 **Résolution des conflits** :
 1. Lorsqu'un conflit est détecté, GitHub vous en informera dans la pull request.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ad2aae64-29c5-4d61-bd48-196326761871)
+
 2. Ouvrez les fichiers en conflit et recherchez les marqueurs de conflit (`<<<<<<<`, `=======`, `>>>>>>>`).
-3. Modifiez le code pour résoudre le conflit, puis supprimez les marqueurs de conflit.
-4. Committez et poussez les modifications résolues.
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/681768d4-1ddc-4e53-80dd-16e91d3320e2)
+
+3. Il suffit de Modifier le code pour résoudre le conflit, puis de supprimer les marqueurs de conflit.
+4. Enfin, Committez et poussez les modifications résolues et le tour est joué !
 
 ---
 
 #### **3. Code reviews et commentaires**
 
-Les "code reviews" sont essentielles pour maintenir la qualité du code. Lorsqu'une pull request est soumise, les membres de l'équipe ou les contributeurs peuvent examiner le code proposé, le tester et fournir des commentaires.
+Les "code reviews" sont essentielles pour maintenir la qualité du code. Lorsqu'une pull request est soumise, Les membres de l'équipe, les contributeurs, ou bien même toutes personnes suivant votre projet de près ou de loin peuvent donner leurs avis (Comme sur les réseaux sociaux!).
 
 **Processus de code review** :
 1. Examinez le code soumis dans la pull request.
-2. Si vous avez des suggestions ou des corrections, commentez directement sur les lignes de code concernées.
-3. Si tout semble correct, vous pouvez approuver la pull request. Sinon, demandez des modifications avant la fusion.
+2. Si vous avez des suggestions ou des corrections, commentez directement sur les lignes de code concernées, dans l'exemple ci-dessous, j'avais fais un petit TP sur Terraform, mon professeur, à la suite de ce TP, a examiner contribuer à mon projet (correctionnel), J'ai donc à mon tour, commenter sa proposition !
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/531ffa98-09b0-40bd-a2f7-957838d046f7)
+
+3. Si tout semble correct, vous pouvez approuver la pull request. Sinon, demandez des modifications avant la fusion. Dans ce même exemple, je ne Mergerais pas la pull request car elle est inutile à mon projet
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/4d27136e-2851-49c6-9be2-79ac59fc2f02)
+
 
 ---
 
-Voici le diagramme de séquence illustrant le processus de forking, de création de pull requests, de gestion des conflits et de code reviews sur GitHub :
+Processus de forking, de création de pull requests, de gestion des conflits et de code reviews sur GitHub :
 
 ![Processus de Collaboration et Contribution avec GitHub](https://showme.redstarplugin.com/d/d:fhf19ig3)
 
-**La collaboration et la contribution sont au cœur de la philosophie de GitHub. En suivant ces étapes et en adoptant les bonnes pratiques, vous pouvez contribuer efficacement à des projets et assurer une qualité de code élevée.**
+*La collaboration et la contribution sont au cœur de la philosophie de GitHub. En suivant ces étapes et en adoptant les bonnes pratiques, vous pouvez contribuer efficacement à des projets et assurer une qualité de code élevée.*
 
 ---
 
