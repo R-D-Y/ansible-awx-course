@@ -535,9 +535,7 @@ Au cours de cette session, nous avons exploré en profondeur les différentes fa
 Pour approfondir vos connaissances sur GitHub, voici quelques ressources utiles :
 
 - **Documentation officielle** : La [documentation de GitHub](https://docs.github.com/) est une ressource inestimable pour comprendre toutes les fonctionnalités de la plateforme.
-
-- **Livres sur GitHub** : Plusieurs livres sont dédiés à GitHub et à Git, offrant des insights approfondis et des astuces pratiques.
-
+- **Vidéos Youtube** : Beaucoup de vidéastes spécialisés en informatique mettent en oeuvre beaucoup de tuto sur Github, même si ce cours servira amplement, rien ne vous empêche de faire de la veille à ce sujet :). 
 ---
 
 #### **3. GitLab**
