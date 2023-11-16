@@ -459,39 +459,46 @@ Processus de forking, de création de pull requests, de gestion des conflits et 
 
 ---
 
-#### **1. GitHub Actions pour l'intégration et la livraison continues (CI/CD)**
+#### **1. GitHub Actions la CI/CD**
 
-**GitHub Actions** est un outil d'automatisation qui vous permet de définir des workflows personnalisés pour votre pipeline de développement logiciel directement depuis votre dépôt GitHub. 
+**GitHub Actions** est un outil d'automatisation clé en main qui permet de définir des workflows personnalisés pour créer une pipeline directement depuis votre dépôt GitHub. En d'autre terme, Github action permet de faire de la CI/CD...
 
-- **CI (Intégration Continue)** : Il s'agit d'automatiser le processus de vérification de chaque modification apportée au code source, en exécutant un ensemble de tests pour s'assurer que le code est correct.
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/4ed736b4-edb2-4115-b019-37033ae5e75a)
 
-- **CD (Livraison Continue)** : C'est la prochaine étape après l'Intégration Continue. Elle se concentre sur la livraison automatique du code vérifié à la production.
+- **CI (Intégration Continue)** : C'est le fait d'automatiser le processus de vérification de chaque modification apportée au code source (vous vous souvenez ? les merges ?), en exécutant un ensemble de tests pour s'assurer que le code est correct. Il va permmettre de valider le fait que la modification que vous avez apporté n'impacte pas l'environnement de production !
 
-- **Automatisation des workflows** : Avec GitHub Actions, vous pouvez automatiser n'importe quel aspect de votre processus de développement, comme la construction, les tests, le déploiement, etc.
+- **CD (Livraison Continue)** : C'est la prochaine étape après l'Intégration Continue. Elle se concentre sur la livraison automatique de code vérifié à la production. Et oui, une fois les tests effectués, pourquoi attendre ? la partie CD va permettre de pousser vos modification directement en production !
 
----
-
-#### **2. Utilisation de GitHub Pages pour héberger des sites web**
-
-**GitHub Pages** est un service d'hébergement gratuit qui prend votre code HTML, CSS et JavaScript, construit à partir d'un dépôt GitHub, et le transforme en un site web.
-
-- **Hébergement de sites web** : Vous pouvez transformer votre dépôt GitHub en un site web pour présenter votre portfolio, votre projet, votre documentation, etc.
-
-- **Personnalisation des thèmes** : GitHub Pages supporte le générateur de sites statiques Jekyll, ce qui signifie que vous pouvez personnaliser l'apparence de votre site en choisissant parmi les thèmes Jekyll disponibles ou en créant le vôtre.
-
-- **Domaines personnalisés** : Vous pouvez également ajouter un domaine personnalisé à votre site GitHub Pages pour lui donner une adresse web professionnelle.
+- **Automatisation des workflows** : Avec GitHub Actions, vous pouvez automatiser tous les aspects du développement de votre projet, comme la construction, les tests, le déploiement, etc. Vous pouvez par exemple faire un workflow avec Github action, pourra faires ces actions: dès qu'une modification est apporté au code, il lance des tests automatique, si les tests n'aboutissent pas, il t'envoie un petit mail pour te dire là ou ça coince, sinon, il pousse ton code directement en production ! Dans ce cas précis, il s'agit de CI/CD, l'intégration as été validé, puis le déploiement a été mis en place !
 
 ---
 
-#### **3. GitHub Packages pour partager des packages de code**
+#### **2. Utilisation de GitHub Pages pour tes sites web**
 
-**GitHub Packages** est un service d'hébergement de packages qui vous permet de héberger vos packages de logiciels et d'utiliser des packages comme dépendances dans vos projets.
+**GitHub Pages** est un service d'hébergement gratuit qui prend votre code HTML, CSS et JavaScript, construit à partir d'un dépôt GitHub, et le transforme en un site web... et oui, Github stock du code, mais pas que ! tu peux aussi t'en servir pour héberger ton site web et ce de façon gratuite, parfait pour faire un petit blog!
 
-- **Partage de packages de code** : Vous pouvez héberger des packages de logiciels dans plusieurs langages de programmation, tels que JavaScript (npm), Java (Maven), Ruby (RubyGems), .NET (NuGet), etc.
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/54c4e68f-3fc3-45c4-86bc-e37499a7d857)
 
-- **Intégration avec d'autres outils** : GitHub Packages s'intègre avec GitHub, ce qui signifie que vous pouvez utiliser le même flux de travail pour le code source et les packages.
+- **Personnalisation des thèmes** : GitHub Pages supporte Jekyll, ce qui signifie que tu peux personnaliser l'apparence de ton site en choisissant parmi les thèmes disponibles ou en créant le vôtre, parfait si tu n'est pas un expert du front-end. (pour information Jekyll est un générateur de site statique! comme Wordpress!).
 
-- **Gestion des versions** : Vous pouvez publier de nouvelles versions de vos packages et définir des versions spécifiques comme dépendances dans vos projets.
+  ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/9e3b2935-54ed-4797-ad3f-cf4f03c68a25)
+
+- **Domaines personnalisés ? c'est possible!** : Tu peux évidemment ajouter ton propre nom de domaine à ton site *GitHub Pages* pour lui donner une adresse web professionnelle, oublie le github.TonPseudo.io ! tu pourra très facilement mettre ton nom.prenom par exemple...
+
+---
+
+#### **3. GitHub Packages**
+
+**GitHub Packages** C'est un service d'hébergement de packages qui te permet d'héberger tes packages de logiciels et de s'en servir comme des dépendances de ton projet ! (un peu comme un requirement.exe) > [ICI](https://github.com/features/packages)
+
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/d0148b6c-63de-43da-9083-4aa8ebfe3c58)
+
+
+- **Partage de packages de code** : Tu peux héberger tes packages et les rendres disponibles dans tous les langages de programmation.
+
+- **Intégration dans github** : Évidemment ce dernier s'intègre avec GitHub, dans tes projets, donc tu peux utiliser le même flux de travail pour le code source et les packages. Tout peut-être stocker au même endroit, et de façon `all-in-one` avoir tout de disponible en 1 `git-clone` !
+
+- **Gestion des versions** : Tu peux publier de nouvelles versions de vos packages et définir des versions spécifiques comme dépendances dans tes projets. Donc de la même manière que tu créer des branches pour versionner ton projet avec du code, ici, avec tes packages, tu peux forcer a utiliser tel ou tel dépendance, dans tel ou tel version selon le client que tu auras en face... Il est sur Windows ? utilise celles-ci, il est sur MacOS ? utilise celles-là :)
 
 ---
 
@@ -500,7 +507,7 @@ Les fonctionnalités avancées de GitHub :
 ![Fonctionnalités Avancées GitHub](https://showme.redstarplugin.com/d/d:HzGXSzbA)
 
 
-**GitHub offre une multitude de fonctionnalités avancées qui permettent aux développeurs de travailler de manière plus efficace, de collaborer avec d'autres et de déployer leurs projets de manière sécurisée et fiable. Ces outils, lorsqu'ils sont utilisés correctement, peuvent grandement améliorer votre flux de travail de développement.**
+*GitHub va offrire énormément fonctionnalités avancées qui permettent qui permettent de travailler de manière plus efficace, de collaborer avec d'autres et de déployer des projets de manière sécurisée et fiable et surtout, très rapide. Ces outils, lorsqu'ils sont utilisés correctement et ensemble, peuvent grandement améliorer la productivité des équipes. Il s'agît de la raison principale pour laquelle Github, combinés à ses fonctionnalités, font qu'ils sont leaders sur ce marché.*
 
 ---
 
