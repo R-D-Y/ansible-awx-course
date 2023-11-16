@@ -157,7 +157,7 @@ Par exemple, ci dessous, je vais attribuer l'issue à mon collègue Antoine en t
 
 ---
 
-Voici le diagramme de type *mindmap* illustrant l'interface graphique de GitHub:
+Recapitulatif Interface graphique de GitHub:
 
 ![Interface Graphique de GitHub](https://showme.redstarplugin.com/d/d:9IXcmqzH)
 
@@ -220,7 +220,7 @@ Avant de commencer à utiliser Git et GitHub via la ligne de commande, Il faut c
 
 ---
 
-Voici le diagramme de séquence illustrant le flux de travail avec Git et GitHub via la ligne de commande:
+Flux de travail avec Git et GitHub via la ligne de commande:
 
 ![Flux de travail avec Git et GitHub](https://showme.redstarplugin.com/d/d:1mwhlZ8L)
 
@@ -284,7 +284,7 @@ Les labels et les milestones aident à organiser et à prioriser le travail :
 
 ---
 
-Voici le diagramme de type illustrant les bonnes pratiques sur GitHub :
+Les Bonnes pratiques sur GitHub :
 
 ![Bonnes Pratiques sur GitHub](https://showme.redstarplugin.com/d/d:ZxrF7C54)
 
@@ -367,7 +367,7 @@ Après avoir effectué vos commits localement, tu peux pousser tes modifications
 
 ---
 
-Diagramme du processus de génération, d'ajout d'une clé SSH à GitHub, et d'interaction avec GitHub via SSH :
+Processus de génération, d'ajout d'une clé SSH à GitHub, et d'interaction avec GitHub via SSH :
 
 ![Processus SSH avec GitHub](https://showme.redstarplugin.com/d/d:gNlHBuVZ)
 
@@ -495,7 +495,7 @@ Processus de forking, de création de pull requests, de gestion des conflits et 
 
 ---
 
-Voici le diagramme de type "mindmap" illustrant les fonctionnalités avancées de GitHub :
+Les fonctionnalités avancées de GitHub :
 
 ![Fonctionnalités Avancées GitHub](https://showme.redstarplugin.com/d/d:HzGXSzbA)
 
@@ -551,7 +551,7 @@ Pour consolider vos connaissances, il est essentiel de mettre en pratique ce que
 ---
 
 
-Voici le diagramme de type "mindmap" illustrant la conclusion et les points clés abordés sur GitHub :
+Conclusion et les points clés abordés sur GitHub :
 
 ![Conclusion GitHub](https://showme.redstarplugin.com/d/d:vq6sffLA)
 
