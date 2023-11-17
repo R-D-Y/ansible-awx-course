@@ -103,6 +103,12 @@ Pour les environnements plus complexes ou changeants, Ansible peut utiliser des 
 
 # **Commandes Ad-hoc**
 
+(eh non, ce chapitre ne parlera pas du *Capitaine Haddock*, mais bien des commandes Ad-Hoc d'Ansible)
+<a href="url"><img src="https://cdn001.tintin.com/public/tintin/img/static/le-capitaine-haddock/captain-haddock_v2.jpg" height="30%" width="30%" ></a> 
+
+
+
+
 Les commandes ad-hoc... Ce sont les commandes Ansible que vous pouvez exécuter de manière ponctuelle pour effectuer une tâche simple comme faire un ping, sans écrire un playbook. Elles sont utiles pour des tâches rapides, mais pour des tâches plus complexes ou répétitives, il est préférable d'utiliser des playbooks, ou bien même un rôle !
 
 **Exemple**:
