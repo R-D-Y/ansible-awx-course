@@ -505,7 +505,7 @@ L'organisation du code va être essentielle pour garantir la lisibilité, la mai
 
 - **Clarté**:
   - **Commentaires explicatifs**: Utilise des commentaires pour expliquer le but de certaines tâches ou décisions, pour les rôles, met le chemin du code, dans le titre des tasks ain de savoir ou tu en ai lors du run.
-  - **Éviter la complexité inutile**: Si une tâche peut être accomplie de plusieurs manières, choisissez la plus simple et la plus directe, le but est d'avoir un code léger!!
+  - **Éviter la complexité inutile**: Si une tâche peut être accomplie de plusieurs manières, choisissez la plus simple, ne l'utilisez qu'une seule fois, pour le reste, faites des boucles !!
 
 ---
 
