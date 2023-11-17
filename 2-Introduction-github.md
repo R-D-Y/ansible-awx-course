@@ -8,7 +8,7 @@
 GitHub est une plateforme qui va permettre d'héberger, de partager et de collaborer sur des projets de code. Il s'agit de la plateformes la plus populaire pour le contrôle de versionning et la collaboration, permettant à plusieurs personnes de travailler ensemble sur des projets. (Pour information, et de façon Open-source, il existe Gitlab qui est un Github en locale permettant de retrouver cette aspect collaboratif, ainsi que Git, permettant de faire du versionning).
 
 Il facilite la collaboration entre les développeurs. Grâce à ses fonctionnalités, comme les "pull requests" et les "issues", les équipes vont pouvoir travailler ensemble de manière plus efficace, ils pourront modifier le code de leurs compère en temps réel, émèttre des commentaires, validé ou non leurs mises en applications... mais nous y reviendrons !!!
-Deplus, ils offrent un espace gratuit pour héberger tes dépôts de code, ce qui nous permet de sauvegarder et de partager nos projet, de façon publique ou privé. Enfin, Github s'intègre avec de nombreux outils et services, ou encore plugins comme des outils de CI/CD, pour automatiser et améliorer la productivité (certain produit son même directement conçu par GIthub comme Github-action qui permet de créer des workflows automatiquement).
+Deplus, ils offrent un espace gratuit pour héberger tes dépôts de code, ce qui permet de sauvegarder et de partager nos projet, de façon publique ou privé. Enfin, Github s'intègre avec de nombreux outils et services, ou encore plugins comme des outils de CI/CD, pour automatiser et améliorer la productivité (certain produit son même directement conçu par GIthub comme Github-action qui permet de créer des workflows automatiquement).
 
 ---
 
@@ -57,7 +57,7 @@ L'interface utilisateur de GitHub est conçue pour être intuitive et conviviale
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ef0b3953-7a74-4acf-aa9c-f84dfe82e5a5)
 
 
-- **Notifications**: Vous recevez des notifications pour les activités liées à vous ou aux dépôts que vous suivez, comme les issues et les pull requests.
+- **Notifications**: tu pourras recevoir des notifications pour les activités liées à tes dépôts ou aux dépôts que tu suis, comme les issues et les pull requests.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/8430428c-ff29-409a-be79-6a607c0f5a01)
 
@@ -66,7 +66,7 @@ L'interface utilisateur de GitHub est conçue pour être intuitive et conviviale
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f41e146f-ee1f-4597-ab2a-0684f85ed5e6)
 
-- **Bonus: Statistique**: Vous pouvez visionnez, en bas de chaque compte Github, le taux de contribution de l'utilisateur, afin de voir si ceui-ci est actif ou non !
+- **Bonus: Statistique**: tu pourras visionner, en bas de chaque compte Github, le taux de contribution de l'utilisateur, afin de voir si ceui-ci est actif ou non !
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/59d3eff8-49ad-4c1f-b6c2-194d51f65a67)
 
@@ -80,31 +80,31 @@ Créer un nouveau dépôt sur GitHub est un processus simple:
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/18e69b59-79b8-47a6-baba-8a7f3cc58cb3)
 
 
-- **Choix du nom**: Choisissez un nom logique pour votre dépôt.
+- **Choix du nom**: Choisisser un nom logique pour votre dépôt.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/be46e8e6-98b2-4a7e-b4db-f2e7fce92359)
 
   
-- **Description**: Ajoutez une brève description pour aider les autres users à comprendre le but de votre dépôt.
+- **Description**: Ajouter une brève description pour aider les autres users à comprendre le but de votre dépôt.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/0495a8ae-f6a5-4a6f-aea0-5dcb0577c6d0)
 
   
-- **Visibilité**: Vous pouvez choisir de rendre votre dépôt public (visible par tout le monde) ou privé (visible uniquement par vous et les personnes que vous invitez).
+- **Visibilité**: Tu peux choisir de rendre votre dépôt public (visible par tout le monde) ou privé (visible uniquement par toi et les personnes que tu invite).
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/cff3d53b-12b7-4dc0-8265-5ef74e48f91f)
 
   
-- **Initialisation avec README**: Il est recommandé d'initialiser votre dépôt avec un fichier README pour fournir des informations sur votre projet. Il va s'agir d'un fichier afficher par défaut dès que quelqu'un cliquera sur votre dépôt, il peut s'agir d'une description plus poussé, et de tutoriels relatif au projet que vous partager.
+- **Initialisation avec README**: Il est recommandé d'initialiser votre dépôt avec un fichier README pour fournir des informations sur ton projet. Il va s'agir d'un fichier afficher par défaut dès que quelqu'un cliquera sur votre dépôt, il peut s'agir d'une description plus poussé, et de tutoriels relatif au projet que tu partage.
 
   ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ef790dca-0bff-4694-802a-2cd34875ee8e)
 
-- **Initialisation avec .gitignore**: Cela permettra d'exclure des fichiers inutiles pour l'utilisateur qui souhaite télécharger votre projet, si par exemple vous ne souhaitez pas qu'il télécharge votre readme, vous ajouter une exception pour l'exclure.
+- **Initialisation avec .gitignore**: Cela permettra d'exclure des fichiers inutiles pour l'utilisateur qui souhaite télécharger votre projet, si par exemple tu ne souhaite pas qu'il télécharge votre readme, il te suffira d'ajouter une exception pour l'exclure : `*.md`.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/7b8b4ec5-b432-4431-9547-36d0dfe2fed1)
 
 
-- **Initialisation avec Licence**: vous pouvez choisir de mettre une licence sur votre projet, afin d'autorisé ou non des choses que les utilisateurs pourraient faire avec votre code.
+- **Initialisation avec Licence**: tu peux choisir de mettre une licence sur votre projet, afin d'autorisé ou non des choses que les utilisateurs pourraient faire avec votre code (cela permet de se proteger juridiquement).
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/516b4ede-179c-495c-8637-4af87ef685f0)
 
@@ -113,17 +113,17 @@ Créer un nouveau dépôt sur GitHub est un processus simple:
 
 #### **3. Clonage, fork et gestion des branches**
 
-- **Clonage d'un dépôt**: Le clonage vous permet de copier un dépot votre machine locale afin d'avoir le code disponible sans web. Vous pouvez clonner de plusieurs manières en HTTPS, en SSH, en Github CLI, ou bien même avec le client lourd GithubDesktop, et enfin dans un fichier zippé.
+- **Clonage d'un dépôt**: Le clonage permet de copier un dépot votre machine locale afin d'avoir le code disponible sans web. tu peux clonner de plusieurs manières en HTTPS, en SSH, en Github CLI, ou bien même avec le client lourd GithubDesktop, et enfin dans un fichier zippé.
 
   ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/8f87cdd7-df19-4c59-9b30-55089adfef80)
 
 
-- **Forking**: Le forking crée une copie personnelle d'un dépôt d'une autre personne. Vous allez prendre le projet d'un tiers, l'apporter dans votre dépot personnel, potentiellement apporté des modifications dessus, puis après pouvoir faire un commit afin de repousser vos modifications sur le projet de la personne tierce.
+- **Forking**: Le forking crée une copie personnelle d'un dépôt d'une autre personne. il est par exemple possible de prendre le projet d'un tiers, l'apporter dans ton dépot personnel, potentiellement apporté des modifications dessus, puis après pouvoir faire un commit afin de repousser tes modifications sur le projet de la personne tierce (qui acceptera ou non de le faire).
 
   ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/1eee7052-1767-43e5-8574-07d840e15996)
 
 
-- **Gestion des branches**: Les branches vous permettent de travailler sur différentes fonctionnalités ou corrections sans affecter la branche principale. Cela vous permet de créer des environnement de developpement afin de ne pas créer des débordements d'erreur, ainsi, vous pouvez traiter vos actions step by step sans risquer de compromettre certaines partie de votre code.
+- **Gestion des branches**: Les branches permettent de travailler sur différentes fonctionnalités ou corrections sans affecter la branche principale (Nous appelons ça le *versionning*. Cela permet de créer des environnement de developpement afin de ne pas créer des débordements d'erreur, ainsi, il est possible de traiter ses actions *step by step* sans risquer de compromettre certaines partie de votre code.
 
   ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/9c7ff4ef-c435-4caa-bb55-93880371bb00)
 
@@ -131,7 +131,7 @@ Créer un nouveau dépôt sur GitHub est un processus simple:
 
 #### **4. Utilisation des issues et des pull requests**
 
-- **Création d'une issue**: Les issues sont utilisées pour suivre les bugs, Si vous utiliser un projet sur github, et que vous vous rendez-compte d'un problème sur ce dernier, vous pouvez créer une issue, et expliquer votre problème au mainteneur, celui-ci, si il maintient toujours le projet, pourra la corriger, encore une fois, le collaboratif prend son sens, car des personnes tierce, ou vous-même pouvez proposer une correction au code.
+- **Création d'une issue**: Les issues sont utilisées pour suivre les bugs, Si tu utilise github pour y stocker ton projet, et que tu te rend compte d'un problème sur ce dernier, tu pourra créer une issue, et expliquer ton problème au mainteneur, celui-ci, si il maintient toujours le projet, pourra la corriger, encore une fois, le collaboratif prend son sens, car des personnes tierce, tu pourras toi-même proposer une correction au code.
 
   
 
@@ -190,30 +190,31 @@ Avant de commencer à utiliser Git et GitHub via la ligne de commande, Il faut c
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/1f72d959-6e1a-4a27-aa55-e1ce19737ca3)
 
 
-- **`git add [fichier]`**: Ajoutez des fichiers à l'index pour les préparer pour le prochain commit.
+- **`git add [fichier]`**: Ajouter des fichiers à l'index pour les préparer pour le prochain commit.
 
-- **`git commit -m 'Message'`**: Créez un nouveau commit avec les fichiers ajoutés à l'index. Le message du commit doit décrire les modifications effectuées.
+- **`git commit -m 'Message'`**: Créer un nouveau commit avec les fichiers ajoutés à l'index. Le message du commit doit décrire les modifications effectuées.
 
-- **`git push`**: Envoyez vos commits vers le dépôt distant sur GitHub.
+- **`git push`**: Envoyer des commits vers le dépôt distant sur GitHub.
 
-- **`git pull`**: Récupérez les dernières modifications du dépôt distant.
+- **`git pull`**: Récupérer les dernières modifications du dépôt distant.
 
-- **`git branch [nom]`**: Créez une nouvelle branche.
+- **`git branch [nom]`**: Créer une nouvelle branche.
 
-- **`git checkout [nom_branche]`**: Changez de branche pour travailler sur une fonctionnalité ou une correction spécifique.
+- **`git checkout [nom_branche]`**: Changer de branche pour travailler sur une fonctionnalité ou une correction spécifique.
 
 ---
 
 #### **3. Création et gestion de dépôts via CLI**
 
-- **`git init`**: Initialisez un nouveau dépôt Git, dans votre répertoire actuel. Cela crée un nouveau sous-répertoire `.git` qui contient tous les fichiers nécessaires pour le dépôt.
+- **`git init`**: Initialiser un nouveau dépôt Git, dans votre répertoire actuel. Cela crée un nouveau sous-répertoire `.git` qui contient tous les fichiers nécessaires pour le dépôt.
 
-- **Ajout d'un dépôt distant**: Une fois que vous avez initialisé un dépôt local, vous pouvez le lier à un dépôt distant sur GitHub en utilisant la commande:
+- **Ajout d'un dépôt distant**: Une fois que tu as initialisé un dépôt local, tu peux le lier à un dépôt distant sur GitHub en utilisant la commande:
+  
   ```bash
   git remote add origin [URL_du_dépôt_GitHub]
   ```
 
-- **Push vers le dépôt distant**: Après avoir effectué vos commits localement, vous pouvez les envoyer vers le dépôt distant avec:
+- **Push vers le dépôt distant**: Après avoir effectué tes commits localement, tu peux les envoyer vers le dépôt distant avec:
   ```bash
   git push -u origin master
   ```
@@ -236,7 +237,7 @@ Le nommage est important afin de mieux gérer les projets. Je te donne ici quelq
 
 - **Descriptif et concis** : Le nom doit refléter le contenu ou la fonction du dépôt/branche comme par exemple `maquette` pour dire que c'est la branche de maquette, ou encore par un nom de fonctionnalité que tu t'apprête à créer : branche `compteur-de-temps`.
   
-- **Éviter les noms génériques** : Les noms comme "test" ou "nouveau" ne sont pas dutout informatifs. Optez pour des noms qui donnent un aperçu du contenu, sans aller dans la branche, vous devez avoir une idée de ce qu'elle contient.
+- **Éviter les noms génériques** : Les noms comme "test" ou "nouveau" ne sont pas dutout informatifs. Opte pour des noms qui donnent un aperçu du contenu, sans aller dans la branche, tu dois pouvoir avoir une idée de ce qu'elle contient.
   
 - **Utiliser des tirets pour séparer les mots, et sans ponctuation, ni majuscules** : Comme, "documentation-awx" sera préférable à "documentationAWX" ou "Documentation_Awx".
 
@@ -251,7 +252,7 @@ Un bon message de commit va faciliter la compréhension de l'historique du proje
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/619a2a9d-d9db-42be-9cca-8838373bfa92)
 
   
-- **Limiter à 50 caractères pour le titre** : Si vous avez besoin d'écrire plus de détails, privilégié le corps du message de commit. Fournissez des informations supplémentaires sur ce que fait le commit et pourquoi.
+- **Limiter à 50 caractères pour le titre** : Si tu as besoin d'écrire plus de détails, privilégie le corps du message de commit. Fournis des informations supplémentaires sur ce que fait le commit et pourquoi.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/49a8f872-9f15-4504-95ca-f8506f3310dc)
 
@@ -262,22 +263,22 @@ Un bon message de commit va faciliter la compréhension de l'historique du proje
 
 La gestion efficace des branches est essentielle pour le bon développement d'un projet :
 
-- **Feature branching** : Créez une branche pour chaque nouvelle fonctionnalité a ajouter ou modifier. Cela va permettre de travailler sur des éléments spécifiques sans perturber la branche principale qui est généralement la production.
+- **Feature branching** : Crée une branche pour chaque nouvelle fonctionnalité a ajouter ou modifier. Cela va permettre de travailler sur des éléments spécifiques sans perturber la branche principale qui est généralement la production.
   
-- **Git flow** : C'est un modèle de workflow standardisé qui définit une structure de branches pour vos fonctionnalités, les corrections, les versions, etc. plus d'info ici > https://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html
+- **Git flow** : C'est un modèle de workflow standardisé qui définit une structure de branches pour tes fonctionnalités, les corrections, les versions, etc. plus d'info ici > https://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html
   
-- **Ne jamais travailler directement sur la branche 'master'** : Comme expliqué précédemment, la branche 'master' doit toujours être stable et aucune opération ne dois être faite sur cette dernière. Donc je le répète, vous souhaité créer une nouvelle fonctionnalité, ou modifier la principale, créer une nouvelle branche, modifier, et pusher !! 
+- **Ne jamais travailler directement sur la branche 'master'** : Comme expliqué précédemment, la branche 'master' doit toujours être stable et aucune opération ne dois être faite sur cette dernière. Donc je le répète, si tu souhaite créer une nouvelle fonctionnalité, ou modifier la principale, créer une nouvelle branche, modifier, et pusher !! 
 ---
 
 #### **4. Utilisation des labels et des milestones (TAG)**
 
 Les labels et les milestones aident à organiser et à prioriser le travail :
 
-- **Catégoriser les issues** : Utilisez des labels pour indiquer le type d'issue (bug, fonctionnalité, amélioration, etc.) cela doit permettre de savoir quelle type de tâche sera attribué au contributeur.
+- **Catégoriser les issues** : Utiliser des labels pour indiquer le type d'issue (bug, fonctionnalité, amélioration, etc.) cela doit permettre de savoir quelle type de tâche sera attribué au contributeur.
   
-- **Prioriser les tâches** : Les milestones peuvent être utilisés pour regrouper des issues liées à une version ou à une étape spécifique du projet, par exemple, il y aura une priorité sur la correction d'un bug, plutôt que de créer une nouvelle fonctionnalité ! dans ce cas, vous pouvez priorisé certaines issues.
+- **Prioriser les tâches** : Les milestones peuvent être utilisés pour regrouper des issues liées à une version ou à une étape spécifique du projet, par exemple, il y aura une priorité sur la correction d'un bug, plutôt que de créer une nouvelle fonctionnalité ! dans ce cas, tu peux priorisé certaines issues.
   
-- **Suivre l'avancement du projet** : Les milestones fournissent une vue d'ensemble de l'avancement vers un objectif particulier, vous avez d'ailleur, sur Github, le mode projet qui va vous permettre d'avoir une vue d'ensemble sur l'avancement du projet, savoir qui doit faire quoi, ainsi que l'état d'avancement de ce dernier (tâche par tâche ou bien global au projet).
+- **Suivre l'avancement du projet** : Les milestones fournissent une vue d'ensemble de l'avancement vers un objectif particulier, tu as d'ailleur, sur Github, le mode projet qui va permettre d'avoir une vue d'ensemble sur l'avancement du projet, savoir qui doit faire quoi, ainsi que l'état d'avancement de ce dernier (tâche par tâche ou bien global au projet).
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/c5cb4094-5091-404d-a551-7b5a771f2902)
 
@@ -296,14 +297,14 @@ Les Bonnes pratiques sur GitHub :
 
 #### **1. Qu'est-ce qu'une clé SSH et pourquoi l'utiliser?**
 
-SSH est un protocole qui permet d'établir une communication sécurisée entre deux systèmes. Dans le contexte de GitHub, les clés SSH sont utilisées pour établir une connexion sécurisée entre votre ordinateur local et GitHub, sans avoir besoin de saisir votre mot de passe à chaque fois, dans le cas de notre projet, Nous avons par exemple un échange de clé entre le VM_NODE et le VM_MASTER, afin que le master puisse réalisé des actions sur le NODE sans avoir a tapper de mot de passe. our information, le port SSH est le 22 ! mais vous devez le savoir ahah
+SSH est un protocole qui permet d'établir une communication sécurisée entre deux systèmes. Dans le contexte de GitHub, les clés SSH sont utilisées pour établir une connexion sécurisée entre votre ordinateur local et GitHub, sans avoir besoin de saisir votre mot de passe à chaque fois, dans le cas de notre projet, Nous avons par exemple un échange de clé entre le VM_NODE et le VM_MASTER, afin que le master puisse réalisé des actions sur le NODE sans avoir a tapper de mot de passe. our information, le port SSH est le 22 ! mais tu dois sûrement le savoir ahah !
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/c6e94d4f-e22a-4014-bfd5-c3e4e9fda5a0)
 
 
 **Avantages de l'utilisation des clés SSH** :
 - **Sécurité renforcée** : Les clés SSH offrent un niveau de sécurité plus élevé que les mots de passe simples, composé de beaucoup plus de caractère évidemment, ainsi qu'un count-retry qui permet de bloquer les tentatives de *brutforce*.
-- **Authentification sans mot de passe** : Une fois la clé SSH configurée, vous n'avez pas besoin de saisir votre mot de passe à chaque fois que vous interagissez avec GitHub, le lien est réalisé par SSH qui vérifie la clé.
+- **Authentification sans mot de passe** : Une fois la clé SSH configurée, tu n'as pas besoin de saisir votre mot de passe à chaque fois que tu interagis avec GitHub, le lien est réalisé par SSH qui vérifie la clé.
 - **Automatisation** : Les clés SSH sont essentielles pour les scripts et les automatisations qui nécessitent des interactions fréquentes avec les dépôts, 99.99% sont effectuer comme cela :) .
 
 ---
@@ -311,8 +312,8 @@ SSH est un protocole qui permet d'établir une communication sécurisée entre d
 #### **2. Génération et ajout d'une clé SSH à GitHub**
 
 **Génération d'une clé SSH** :
-1. Ouvrez un terminal ou une invite de commande (sur la VM_MASTER en l'occurence).
-2. Tapez la commande suivante pour générer une nouvelle paire de clés SSH (clé privée et clé publique) :
+1. Ouvre un terminal ou une invite de commande (sur la VM_MASTER en l'occurence).
+2. Tape la commande suivante pour générer une nouvelle paire de clés SSH (clé privée et clé publique) :
    ```bash
    ssh-keygen -t rsa -b 4096 -C "votre.email@example.com"
    ```
@@ -321,7 +322,7 @@ SSH est un protocole qui permet d'établir une communication sécurisée entre d
 
 
    
-3. Suivez les instructions à l'écran pour choisir un emplacement pour les clés et, éventuellement, (un mot de passe pour sécuriser la clé privée).
+3. Suivre les instructions à l'écran pour choisir un emplacement pour les clés et, éventuellement, (un mot de passe pour sécuriser la clé privée).
 
 **Ajout de la clé publique à GitHub** :
 1. Ouvre le fichier contenant la clé publique (généralement dans `~/.ssh/id_rsa.pub`) et copie son contenu (tu peux faire un `CAT` dessus).
@@ -329,18 +330,18 @@ SSH est un protocole qui permet d'établir une communication sécurisée entre d
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ae10c6b0-c1bf-4544-b475-651daa3bf4d6)
 
    
-3. Connectez-vous à votre compte GitHub et accédez à **Settings** > **SSH and GPG keys**.
+3. Connecte-toi à ton compte GitHub et accède à **Settings** > **SSH and GPG keys**.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/8ecbd928-a459-47e8-b4a3-e85e36821b86)
 
    
-5. Cliquez sur **New SSH key**, donnez un titre à votre clé (nom du pc par exemple) et collez le contenu de la clé publique dans le champ prévu à cet effet.
+5. Clique sur **New SSH key**, donne un titre à votre clé (nom du pc par exemple) et colle le contenu de la clé publique dans le champ prévu à cet effet.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f950e515-591f-4160-b64a-f66f89b2a314)
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/5c9ae7eb-219d-4896-83a9-43d4892ade04)
 
 
-6. Cliquez sur **Add SSH key** pour ajouter la clé à votre compte GitHub.
+6. Clique sur **Add SSH key** pour ajouter la clé à votre compte GitHub.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/0ac0e69d-19ac-4865-bffb-90daa3e0e367)
 
@@ -349,7 +350,7 @@ SSH est un protocole qui permet d'établir une communication sécurisée entre d
 
 #### **3. Clonage et push avec SSH**
 
-Une fois votre clé SSH ajoutée à GitHub, vous pouvez cloner des dépôts et pousser des modifications en utilisant SSH au lieu de HTTPS, donc beaucoup plus simple. Plus besoin de renseigner de mot de passe, tout passera par SSH, tu pourra télécharger du code, pousser du code, faire des modifications.... En bref, tout ce qui était faisable depuis le GUI pourra être fait depuis ton p'tit terminal !
+Une fois ta clé SSH ajoutée à GitHub, tu peux cloner des dépôts et pousser des modifications en utilisant SSH au lieu de HTTPS, donc beaucoup plus simple. Plus besoin de renseigner de mot de passe, tout passera par SSH, tu pourra télécharger du code, pousser du code, faire des modifications.... En bref, tout ce qui était faisable depuis le GUI pourra être fait depuis ton p'tit terminal !
 
 **Clonage d'un dépôt avec SSH** :
 ```bash
@@ -360,7 +361,7 @@ git clone git@github.com:NomUtilisateur/NomDepot.git
 
 
 **Push des modifications avec SSH** :
-Après avoir effectué vos commits localement, tu peux pousser tes modifications vers GitHub en utilisant SSH. La commande reste la même (`git push`), mais la connexion est établie via SSH, plus besoin d'interface graphique !
+Après avoir effectué des commits localement, tu peux pousser tes modifications vers GitHub en utilisant SSH. La commande reste la même (`git push`), mais la connexion est établie via SSH, plus besoin d'interface graphique !
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f2e2a08d-f1af-4cbb-bb93-7fdafccca188)
 
@@ -379,10 +380,10 @@ Processus de génération, d'ajout d'une clé SSH à GitHub, et d'interaction av
 
 #### **1. Forking et création de pull requests**
 
-Le processus de "forking" est une méthode très utilisé pour la contribution dans les projets. Il vous permet de créer une copie d'un projet externe sur notre propre compte GitHub, d'y apporter des modifications, puis de proposer ces modifications au dépôt original via une "pull request".
+Le processus de "forking" est une méthode très utilisé pour la contribution dans les projets. Il permet de créer une copie d'un projet externe sur notre propre compte GitHub, d'y apporter des modifications, puis de proposer ces modifications au dépôt original via une "pull request".
 
 **Étapes pour forker un dépôt et créer une pull request** :
-1. **Forker le dépôt** : Cliquez sur le bouton "Fork" en haut à droite de la page du dépôt que vous souhaitez contribuer. Cela créera une copie du dépôt sur votre compte GitHub (je prend par exemple le projet de mon collègue Bochi auquel je souhaite apporter une modification.
+1. **Forker le dépôt** : Clique sur le bouton "Fork" en haut à droite de la page du dépôt que tu souhaite contribuer. Cela créera une copie du dépôt sur ton compte GitHub (je prend par exemple le projet de mon collègue Bochi auquel je souhaite apporter une modification.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/38246d3b-74b9-4dc6-9734-d5e9ab4d9f75)
 
@@ -395,20 +396,20 @@ et voilà, je me retrouve avec le projet de Bochi, sur mon compte github !
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/cbcb3836-e178-4838-98bd-c2cd616e4c1f)
 
 
-3. **Clonez votre fork** : Clonez le dépôt forké sur votre machine locale pour y apporter des modifications, comme appris précédemment, je vais le cloner pour qu'il se retrouve en local sur mon poste avec la commande `git clone git@github.com:R-D-Y/NomDuProjet.git`.
+3. **Clone ton fork** : Clone le dépôt forké sur ta machine locale pour y apporter des modifications, comme appris précédemment, je vais le cloner pour qu'il se retrouve en local sur mon poste avec la commande `git clone git@github.com:R-D-Y/NomDuProjet.git`.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/f13be424-7d8c-4e3c-a46c-89ef95f570c1)
 
    
-5. **Apportez vos modifications** : Une fois le projet en local, libre à vous d'apporter les options souhaités!
+5. **Apporte des modifications** : Une fois le projet en local, libre à toi d'apporter les options souhaités!
 
 
    
-7. **Créez une pull request** : Retournez à la page du dépôt original et cliquez sur "New Pull Request". Sélectionnez votre fork et la branche sur laquelle vous avez travaillé, puis soumettez la pull request !! 
+7. **Crée une pull request** : Retourne à la page du dépôt original et clique sur "New Pull Request". Sélectionne ton fork et la branche sur laquelle tu as travaillé, puis soumets la pull request !! 
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/509caa61-7e0e-4202-9a46-d283edc94ab7)
 
-8. **Usage perso ??** : Et oui, après votre forks, si la modification que vous avez apporter, est strictement personnel à votre infrastructure, et n'aura aucun plus pour les autres, vous n'êtes évidemment pas obligé de soumettre un pull request, cette dernière sert uniquement à contribué à un projet, afin de pousser vos modifications pour les autres :) .
+8. **Usage perso ??** : Et oui, après votre forks, si la modification que tu as apporter, est strictement personnel à ton infrastructure, et n'aura aucun plus pour les autres, tu n'est évidemment pas obligé de soumettre un pull request, cette dernière sert uniquement à contribué à un projet, afin de pousser tes modifications pour les autres :) .
 
 ---
 
@@ -417,30 +418,30 @@ et voilà, je me retrouve avec le projet de Bochi, sur mon compte github !
 Lorsque plusieurs personnes travaillent sur le même code, évidemment, des conflits peuvent survenir. GitHub fournit donc des outils pour identifier et résoudre ces derniers !
 
 **Résolution des conflits** :
-1. Lorsqu'un conflit est détecté, GitHub vous en informera dans la pull request.
+1. Lorsqu'un conflit est détecté, GitHub t'informera dans la pull request.
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/ad2aae64-29c5-4d61-bd48-196326761871)
 
-2. Ouvrez les fichiers en conflit et recherchez les marqueurs de conflit (`<<<<<<<`, `=======`, `>>>>>>>`).
+2. Ouvre les fichiers en conflit et recherche les marqueurs de conflit (`<<<<<<<`, `=======`, `>>>>>>>`).
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/681768d4-1ddc-4e53-80dd-16e91d3320e2)
 
 3. Il suffit de Modifier le code pour résoudre le conflit, puis de supprimer les marqueurs de conflit.
-4. Enfin, Committez et poussez les modifications résolues et le tour est joué !
+4. Enfin, Commit et pousse les modifications résolues et le tour est joué !
 
 ---
 
 #### **3. Code reviews et commentaires**
 
-Les "code reviews" sont essentielles pour maintenir la qualité du code. Lorsqu'une pull request est soumise, Les membres de l'équipe, les contributeurs, ou bien même toutes personnes suivant votre projet de près ou de loin peuvent donner leurs avis (Comme sur les réseaux sociaux!).
+Les "code reviews" sont essentielles pour maintenir la qualité du code. Lorsqu'une pull request est soumise, Les membres de l'équipe, les contributeurs, ou bien même toutes personnes suivant ton projet de près ou de loin peuvent donner leurs avis (Comme sur les réseaux sociaux!).
 
 **Processus de code review** :
-1. Examinez le code soumis dans la pull request.
-2. Si vous avez des suggestions ou des corrections, commentez directement sur les lignes de code concernées, dans l'exemple ci-dessous, j'avais fais un petit TP sur Terraform, mon professeur, à la suite de ce TP, a examiner contribuer à mon projet (correctionnel), J'ai donc à mon tour, commenter sa proposition !
+1. Examine le code soumis dans la pull request.
+2. Si tu as des suggestions ou des corrections, commente directement sur les lignes de code concernées, dans l'exemple ci-dessous, j'avais fais un petit TP sur Terraform, mon professeur, à la suite de ce TP, a examiner contribuer à mon projet (correctionnel), J'ai donc à mon tour, commenter sa proposition !
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/531ffa98-09b0-40bd-a2f7-957838d046f7)
 
-3. Si tout semble correct, vous pouvez approuver la pull request. Sinon, demandez des modifications avant la fusion. Dans ce même exemple, je ne Mergerais pas la pull request car elle est inutile à mon projet
+3. Si tout semble correct, tu peux approuver la pull request. Sinon, demande des modifications avant la fusion. Dans ce même exemple, je ne Mergerais pas la pull request car elle est inutile à mon projet
 
 ![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/4d27136e-2851-49c6-9be2-79ac59fc2f02)
 
@@ -465,11 +466,11 @@ Processus de forking, de création de pull requests, de gestion des conflits et 
 
  <a href="url"><img src="https://github.com/R-D-Y/ansible-awx-course/assets/102509252/4ed736b4-edb2-4115-b019-37033ae5e75a" height="45%" width="45%" ></a>
 
-- **CI (Intégration Continue)** : C'est le fait d'automatiser le processus de vérification de chaque modification apportée au code source (vous vous souvenez ? les merges ?), en exécutant un ensemble de tests pour s'assurer que le code est correct. Il va permmettre de valider le fait que la modification que vous avez apporté n'impacte pas l'environnement de production !
+- **CI (Intégration Continue)** : C'est le fait d'automatiser le processus de vérification de chaque modification apportée au code source (tu te souviens ? les merges ?), en exécutant un ensemble de tests pour s'assurer que le code est correct. Il va permmettre de valider le fait que la modification que tu as apporté n'impacte pas l'environnement de production !
 
-- **CD (Livraison Continue)** : C'est la prochaine étape après l'Intégration Continue. Elle se concentre sur la livraison automatique de code vérifié à la production. Et oui, une fois les tests effectués, pourquoi attendre ? la partie CD va permettre de pousser vos modification directement en production !
+- **CD (Livraison Continue)** : C'est la prochaine étape après l'Intégration Continue. Elle se concentre sur la livraison automatique de code déjà vérifié à la production. Et oui, une fois les tests effectués, pourquoi attendre ? la partie CD va permettre de pousser tes modification directement en production !
 
-- **Automatisation des workflows** : Avec GitHub Actions, vous pouvez automatiser tous les aspects du développement de votre projet, comme la construction, les tests, le déploiement, etc. Vous pouvez par exemple faire un workflow avec Github action, pourra faires ces actions: dès qu'une modification est apporté au code, il lance des tests automatique, si les tests n'aboutissent pas, il t'envoie un petit mail pour te dire là ou ça coince, sinon, il pousse ton code directement en production ! Dans ce cas précis, il s'agit de CI/CD, l'intégration as été validé, puis le déploiement a été mis en place !
+- **Automatisation des workflows** : Avec GitHub Actions, tu peux automatiser tous les aspects du développement de votre projet, comme la construction, les tests, le déploiement, etc. tu peux par exemple faire un workflow avec Github action, pourra faires ces actions: dès qu'une modification est apporté au code, il lance des tests automatique, si les tests n'aboutissent pas, il t'envoie un petit mail pour te dire là ou ça coince, sinon, il pousse ton code directement en production ! Dans ce cas précis, il s'agit de CI/CD, l'intégration as été validé, puis le déploiement a été mis en place !
 
 ---
 
@@ -504,7 +505,7 @@ Processus de forking, de création de pull requests, de gestion des conflits et 
 
 - **Intégration dans github** : Évidemment ce dernier s'intègre avec GitHub, dans tes projets, donc tu peux utiliser le même flux de travail pour le code source et les packages. Tout peut-être stocker au même endroit, et de façon `all-in-one` avoir tout de disponible en 1 `git-clone` !
 
-- **Gestion des versions** : Tu peux publier de nouvelles versions de vos packages et définir des versions spécifiques comme dépendances dans tes projets. Donc de la même manière que tu créer des branches pour versionner ton projet avec du code, ici, avec tes packages, tu peux forcer a utiliser tel ou tel dépendance, dans tel ou tel version selon le client que tu auras en face... Il est sur Windows ? utilise celles-ci, il est sur MacOS ? utilise celles-là :)
+- **Gestion des versions** : Tu peux publier de nouvelles versions de tes packages et définir des versions spécifiques comme dépendances dans tes projets. Donc de la même manière que tu créer des branches pour versionner ton projet avec du code, ici, avec tes packages, tu peux forcer a utiliser tel ou tel dépendance, dans tel ou tel version selon le client que tu auras en face... Il est sur Windows ? utilise celles-ci, il est sur MacOS ? utilise celles-là :)
 
 ---
 
@@ -539,7 +540,7 @@ Au cours de cette session, nous avons exploré en profondeur les différentes fa
 
 - **Collaboration et Contribution** : Nous avons appris comment collaborer efficacement avec d'autres, savoir gérer les conflits, et appris la manière dont nous pouvions contribuer à des projets autant en interne, qu'en Open-Source!
   
-- **Fonctionnalités Avancées** : Nous avons découvert quelques outils proposés par Github tels que GitHub Actions, GitHub Pages, et GitHub Packages. (Il en existe encore beaucoup croyez-moi!).
+- **Fonctionnalités Avancées** : Nous avons découvert quelques outils proposés par Github tels que GitHub Actions, GitHub Pages, et GitHub Packages. (Il en existe encore beaucoup crois-moi!).
 
 ---
 
@@ -548,13 +549,13 @@ Au cours de cette session, nous avons exploré en profondeur les différentes fa
 Pour approfondir tes connaissances sur GitHub, voici quelques ressources utiles :
 
 - **Documentation officielle et blog** : La [documentation de GitHub](https://docs.github.com/) est une ressource inestimable pour comprendre toutes les fonctionnalités de la plateforme. Pour des sujets peut-être spécifique, ou des mises en oeuvre concrète, je te conseil le blog de [Stéphane Robert](https://blog.stephane-robert.info/) qui m'a aidé plus d'une fois!
-- **Vidéos Youtube** : Beaucoup de vidéastes spécialisés en informatique mettent en oeuvre beaucoup de tuto sur Github, même si ce cours servira amplement, rien ne vous empêche de faire de la veille à ce sujet :).
-- **Des soucis ?** : Github, ayant une large communeauté, vous n'aurez aucun mal à trouver de l'aide, sur le [forum interne](https://github.com/topics/forums) ou encore sur [stackoverflow](https://stackoverflow.com/). 
+- **Vidéos Youtube** : Beaucoup de vidéastes spécialisés en informatique mettent en oeuvre beaucoup de tuto sur Github, même si ce cours servira amplement, rien ne t'empêche de faire de la veille à ce sujet :).
+- **Des soucis ?** : Github, ayant une large communeauté, tu n'auras aucun mal à trouver de l'aide, sur le [forum interne](https://github.com/topics/forums) ou encore sur [stackoverflow](https://stackoverflow.com/). 
 ---
 
 #### **3. GitLab**
 
-Alors que nous avons principalement discuté de GitHub dans ce cours, il est également important de mentionner **GitLab**, c'est une autre plateforme populaire de gestion de code source. GitLab offre des fonctionnalités similaires à GitHub mais se distingue par certaines fonctionnalités, Gitlab est un projet Open-Source et donc gratuit, et ce dernier peut-être installer en local. Sur ce même sujet, il nest pas rare en entreprise d'utiliser Gitlab et github, car sans accès web, Gitlab est un bon remède, parfait pour des serveurs qui n'ont pas d'accès web pour des raisons de sécurités, ceux-ci peuvent par exemple aller chercher des sources sur Gitlab! C'est un autre sujet, nous n'en n'aurons pas besoin pour notre projet, mais n'hésitez pas à vous renseigner à ce sujet.
+Alors que nous avons principalement discuté de GitHub dans ce cours, il est également important de mentionner **GitLab**, c'est une autre plateforme populaire de gestion de code source. GitLab offre des fonctionnalités similaires à GitHub mais se distingue par certaines fonctionnalités, Gitlab est un projet Open-Source et donc gratuit, et ce dernier peut-être installer en local. Sur ce même sujet, il nest pas rare en entreprise d'utiliser Gitlab et github, car sans accès web, Gitlab est un bon remède, parfait pour des serveurs qui n'ont pas d'accès web pour des raisons de sécurités, ceux-ci peuvent par exemple aller chercher des sources sur Gitlab! C'est un autre sujet, nous n'en n'aurons pas besoin pour notre projet, mais n'hésite pas à te renseigner à ce sujet.
 
 ---
 
