@@ -4,6 +4,9 @@
 
 Ansible, c'est un outil d'automatisation IT open-source très repandue qui permet d'automatiser des tâches par exemple de la configuration de serveurs, du déploiement d'applications et de la gestion de l'infrastructure. Contrairement à d'autres outils d'automatisation, Ansible est conçu pour être minimaliste et facile à utiliser (via une logique assez simpliste de description du besoin). Il utilise un langage de description simple à lire pour l'humain,le YAML, qui permet de définir les tâches d'automatisation.
 
+ <a href="url"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ansible_Logo.png" height="30%" width="30%" ></a>
+
+
 - **Pourquoi utiliser Ansible?**
   - Ansible offre une approche simple et efficace pour automatiser les tâches sans nécessiter de scripts complexes ou de langages de programmation spécialisés, eh oui ! seul une "description" en YAML suffit a lefaire fonctionner .
   
@@ -11,6 +14,9 @@ Ansible, c'est un outil d'automatisation IT open-source très repandue qui perme
   - Facilité d'utilisation : Ansible utilise YAML pour définir les tâches d'automatisation.
   - Agentless : Contrairement à d'autres outils, Ansible n'a pas besoin d'agents installés sur les machines cibles, il agit depuis un serveur master qui effectue des tâches sur sa cible (il a seulement besoin d'une clé ssh, et de python).
   - Extensible : Ansible dispose d'une vaste bibliothèque de modules pour gérer différents systèmes et services, et comme sur Docker-Hub, Ansible-Galaxy propose des rôles clé en mains créer par la communeauté.
+
+
+<a href="url"><img src="https://www.ypsi.fr/wp-content/uploads/2021/09/schema_methodePlaybook.png" height="100%" width="100%" ></a>
 
 **Exemple**:
 Imaginons que tu souhaite installer HTTPD sur un serveur. Avec Ansible, ça pourrait ressembler à ceci en YAML:
