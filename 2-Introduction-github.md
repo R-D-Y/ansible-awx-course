@@ -1,7 +1,4 @@
-
-![image](./assets/102509252/92b4af8d-7618-472c-b36b-54778a6220c8.png)
-
-   
+ 
 # **[1] Introduction à GitHub**
 
 ---
