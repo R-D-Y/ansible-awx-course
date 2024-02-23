@@ -1,0 +1,198 @@
+Bienvenue dans la partie mère du cours après un loin périple d'apprentissage de plusieurs techno. C'est ici que vous allez apprendre la nécessité de ce genre de plateforme d'automatisation puis surtout vous aurez plus des pavés de 5000 pages, ce cours est quasi que de la manipulation, SUPER... Aller on y va :)
+
+___
+
+## Configuration Playbook 
+
+#### Projet
+
+Dans un premier temps, vous avez besoin d'initialisé votre repository GitHub afin que la plateforme puisse voir vos fichier Ansible : Inventaire, Playbook, Vault 
+
+Pour cela il faut vous rendre sur l'onglet projet et cliquer sur la petite flèche verte en haut à droite afin de créer un nouveau projet et vous tomberez sur cette page : 
+
+Rentrer les informations comme sur le screenshoot, je vais vous expliquez :
+
+![Capture d’écran 2024-01-29 101947](https://github.com/0xAntoineB/My_first_repo/assets/80824417/b39d7e55-63e3-4096-81d3-f7d6121571de)
+
+- Nom : Un nom pour votre projet est nécessaire, je vous conseil de donner un nom parlant 
+- Laisser votre organisation par default, nous verrons les organisations plus tard  
+- Type SCM : Git, très important car AWX va comprendre que vos fichier sont stocker dans un repository
+- URL du SCM : Le lien HTTPS de votre repo git, AWX va pouvoir cloner sur la plateforme
+- Branch SCM : main, AWX comprend que les fichiers sont dans cette branche et pas une autre (Vous avez pas besoin d'avoir plusieurs branche pour ce cours)
+
+Cliquer sur enregistrer et vous avez officiellement un projet sur AWX !  
+
+___
+
+#### Inventaire
+
+On va maintenant ajouter les serveurs de l'infrastructure sur la plateforme en ajoutant un inventaire ! 
+Pour cela, il faut aller dans l'onglet inventaire puis créer un nouveau inventaire : 
+
+![Capture d’écran 2024-02-06 095625](https://github.com/0xAntoineB/My_first_repo/assets/80824417/cbc04283-284f-493c-b222-b4a391e0fd21)
+
+- Un nom pour l'inventaire
+- Laisser l'organisation par défaut
+
+Il faut ensuite ajouter des sources à l'inventaire, cliquer sur votre inventaire franchement créer puis cliquer sur "Source" : 
+
+
+Créer une nouvelle source en cliquant sur le bouton + vert et renseigner les informations suivante : 
+
+![Capture d’écran 2024-02-06 095726](https://github.com/0xAntoineB/My_first_repo/assets/80824417/62ecf076-4124-4dda-b262-5e76b1de73d3)
+
+- Nom : Ajouter un nom à la source
+- Source : Provenance d'un projet, AWX va reconnaitre le fichier ou sera stocké les serveurs.
+- Projet : Sélectionner votre projet fraichement créer 
+- Fichier d'inventaire : Sélectionner le fichier inventory.ini situer dans votre repository GitHub 
+
+Cliquer sur enregistrer, votre inventaire est créer ! 
+
+___
+
+#### Credentiels
+
+On va ensuite configurer les credentials pour la sécurité des playbook.
+
+Aller dans l'onglet "Information d'information" et créer une nouvelle credentiel en cliquant sur le petit + vert. 
+Nous allons initié le mot de passe Vault afin que le playbook reconnaisse le mot de passe encrypté.
+
+Renseigner les informations suivantes : 
+
+![Capture2](https://github.com/0xAntoineB/My_first_repo/assets/80824417/776d635b-0107-4e34-8bbd-e3c0a8c5a94d)
+
+- Nom : Un nom à la credentiel qui parle 
+- Organisation : Garder l'organisation par default 
+- Type d'information d'identification : Chercher le mot clé "Coffre-fort"  pour le Vault (Oui en français c'est magnifique)
+- Mot de passe de l'archivage sécurisé : Renseigner votre mot de passe que vous avez créer pour le Vault 
+
+Cliquer sur enregistrer et vous avez  votre première credentiel mais c'est pas fini ! Vous n'utiliser pas le compte root de la machine, pour lancer vos playbooks, nous allons avoir besoin du  mot de passe sudo. 
+Pour initié ce mot de passe sur la plateforme, créer une credentiel puis renseigner les informations suivantes : 
+
+![Capture3](https://github.com/0xAntoineB/My_first_repo/assets/80824417/0fdf44ff-271e-479e-a4c0-43c2a7b92537)
+
+- Nom : Ajouter un nom qui parle
+- Organisation : Garder l'organisation par default 
+- Type d'information d'identification : Chercher le mot clé "Machine" pour dire à AWX que c'est une credentiel de type server. 
+- Méthode d'escalade privilégiée : sudo, comme la commande ! 
+- Mot de passe pour l'élévation des privilège : Ajouter le mot de passe sudo comme vous le connaissez : toor
+
+Cliquer sur enregistrer et vous avez vos deux credentiels prêtes pour AWX 
+
+On va pouvoir lancer notre premier playbook depuis la plateforme ! On va tout simplement lancer notre playbook qu'on a développer dans le module Ansible. 
+
+___
+
+#### Modèle/Template
+
+Pour lancer notre premier modèle sur la plateforme, il faut cliquer sur l'onglet "modèle" puis sur le bouton + vert 
+
+Renseigner les informations : 
+
+![Capture4](https://github.com/0xAntoineB/My_first_repo/assets/80824417/62bde227-f50c-46aa-983c-c9166c6633cf)
+
+- Nom : Ajouter à votre playbook 
+- Inventaire : Sélectionner votre inventaire créer précédemment 
+- Projet : Sélectionner votre projet créer précédemment 
+- Type de job : Exécuter, c'est un playbook qu'on doit lancer 
+- Playbook : Sélectionner le nom du fichier dans répository Github 
+- Information d'identification : Rechercher et ajouter vos deux credentiel qui vous avez créer : Vault + Machine 
+- Verbosité : 0 
+- Activer l'élévation des privilèges : Cocher cette case, c'est pour activer le mode sudo 
+
+Cliquer sur enregistrer et votre playbook est créer, on peut maintenant s'amuser à le lancer ! Une fois créer vous pouver le launcher depuis la plateforme en cliquant sur la petite fusée : 
+
+![Capture5](https://github.com/0xAntoineB/My_first_repo/assets/80824417/e7f44a4e-b35f-4def-b8e1-4a7ceac09828)
+
+Normalement, si vous avez bien renseigner les bonnes informations. Vous avez pu vous connecter sur la machine, mais le playbook de fonctionnera pas car vous avez déjà les paquets :D
+
+___
+
+## Gestion de la plateforme 
+
+#### Organisation/Team/User
+
+Dans cette partie nous allons voir la gestion de la plateforme avec les organisations, teams et utilisateur. Généralement dans une entreprise, les utilisateurs utilisent leurs identifiants de l'active directory lorsqu'ils souhaitent accéder sur la  plateforme. Cela évite de recréer des utilisateurs et d'avoir deux gestionnaires d'utilisateurs dans deux endroits, nous allons voir se principe juste après. Mais on va quand même faire cette manipulation pour comprendre les principes de base. Nous verrons également dans cette partie les bons fonctionnements de la plateforme pour une meilleure visibilité comme les notifications par exemple. 
+
+Dans un premier temps on va créer une organisation. Une organisation dans AWX représente entité dans une entreprise. Généralement cette fonctionnalité est utilisée par les grosses boites car il est nécessaire  
+Création d'une organisation dans l'onglet "Organisations" et cliquer sur le bouton + vert : 
+
+![Capture d’écran 2024-02-07 195323](https://github.com/0xAntoineB/My_first_repo/assets/80824417/7342e520-10a7-4752-bc95-f282b6325ac6)
+
+- Nom : Donner un nom à votre organisation 
+
+Cliquer sur enregistrer et vous aurez votre première organisation ! Dans cette organisation vous allez pouvoir ajouter votre première team : 
+
+![Capture d’écran 2024-02-07 195403](https://github.com/0xAntoineB/My_first_repo/assets/80824417/457e0341-7987-4566-8b36-f0ff79c28cd4)
+
+- Nom : Un nom pour la team. 
+- Organisation : Ajouter votre organisation récemment créer.
+
+Cliquer sur enregistrer et vous allez pouvoir dans cette nouvelle team ajouter un nouvel utilisateur. Rendez-vous dans l'onglet utilisateur et cliquer sur le petit plus vert : 
+
+![Capture d’écran 2024-02-19 094956](https://github.com/0xAntoineB/My_first_repo/assets/80824417/eed82fdf-7a0d-4242-8554-79a7016a452b)
+
+- Prénom : Ajouter un prénom
+- Nom : Ajouter un nom
+- Nom d'utilisateur : Ajouter un nom d'utilisateur qui n'est pas forcement obliger de ressembler au prénom + nom 
+- Organisation : L'organisation fraichement créée
+- Un mot de passe : Mettez ce que vous voulez
+- Email : Mettez un email factice ! Mais dans des cas réel, il est important de mettre une vrai adresse pour les notifications
+- Type d'utilisateur : Normal
+
+Cliquer sur enregistrer, vous pourrez après la création ajouter l'utilisateur dans une team lorsque vous cliquer sur le petit crayon à coté de l'utilisateur. 
+
+Vous pourrez vous connectez dés maintenant avec le nouvel utilisateur ! Mais pas si vite, nous allons lui donner des permissions. 
+
+AWX est une plateforme bien sécurisée et notre nouvel utilisateur a pour l'instant accès à rien. 
+Pour rappel depuis le début nous manipulons en mode Administrateur c'est pour ça que l'on voit tout. 
+
+Dirigeons nous vers l'onglet "Permissions" et allons ajouter le playbook que vous avez fraichement importer depuis la plateforme. 
+
+Cliquer sur le petit plus et suivez le screenshot afin d'ajouter notre playbook pour notre nouvel utilisateur : 
+
+![Capture d’écran 2024-02-19 094144](https://github.com/0xAntoineB/My_first_repo/assets/80824417/319262ce-6a7e-4194-b04d-1c238a80adac)
+
+- Cocher votre playbook 
+- Sélectionner en mode exécution 
+
+Enregistrer tout ça ! On va pouvoir maintenant se connecter avec notre utilisateur en cliquant sur le bouton logout en haut à droite de la plateforme. 
+
+Connecter vous avez avec le nom de l'utilisateur + le mot de passe. 
+
+Vous arrivez sur une nouvelle plateforme ou il y'a par exemple plus la métrique du playbook lancer avec l'admin et vous avez plus tous vos onglets d'administrations. 
+
+Allez dans l'onglet Modèle et relancer votre playbook ! Vous aurez de nouveau la métric pour VOTRE utilisateur. 
+
+Après ça, reconnecté vous en mode Administrateur et vous allez voir qu'un autre playbook a été lancer avec un autre utilisateur. 
+
+Pour comprendre, nous avons une partie administration de la plateforme avec l'user admin qui lui va pouvoir voir la globalité de ce qu'il se passe et de gérer la plateforme en cas de problème majeur. Puis nous avons nos simple utilisateur qui voit leur propre tâche et qui se perdent pas dans les tâches des autres.
+
+Généralement les utilisateurs ne sont pas créer manuellement, ils sont reliés avec l'active directory de l'entreprise. 
+
+___
+
+#### Planification 
+
+Nous allons maintenant ajouter une planification pour notre playbook, il peut être important parfois de lancer une automatisation tous les jours sans qu'on est besoin de lancer manuellement avec le bouton. 
+Donc nous allons créer tout simplement une planification sur la plateforme ! 
+
+Pour rappel nous travaillons sur des VM avec notre machine personnelle, la plateforme ne tournera pas H24. Imaginez-vous que en entreprise la plateforme fonctionne sur un serveur, d'où l'intérêt de comprendre cette manipulation ! 
+
+Rendez-vous sur l'onglet modèle et cliquer sur votre premier playbook. Vous aurez des onglets au dessus et cliquer sur "Planification" et puis sur le petit plus vert :
+
+![Capture d’écran 2024-02-19 102026](https://github.com/0xAntoineB/My_first_repo/assets/80824417/0aa0b679-70ad-4f1c-a415-bce002d4de35)
+
+- Ajouter un nom à votre planification 
+- Une date 
+- Une heure
+- Le fuseau horaire 
+- Une fréquence 
+
+Si vous voulez essayer la planification, ajouter la date d'aujourd'hui et 2 minutes de plus en fonction de votre heure et vous verrez votre playbook se lancer tout seul ! 
+
+
+
+
+
+
