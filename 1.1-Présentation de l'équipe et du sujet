@@ -1,0 +1,49 @@
+**AWX Ansible : Plongée au cœur de l'automatisation et du monde DevOps**
+
+
+**Qui sommes-nous ?**
+
+ **Rémi** : passionné d'informatique en systèmes, réseaux et cloud , je suis Rémi, un de vos instructeur (Avec Antoine) pour ce cours. Né et ayant grandi à Lyon, j'ai suivi un parcours académique orienté Système et réseau. Ayant obtenu mon BTS en SIO, je me suis naturellement  dirigé vers un Bachelor 3 en "Système réseau cloud computing" à Sciences U. Mon parcours professionnel m'a amené à travailler chez Bourg-habitat en tant qu'administrateur système et réseau, où j'ai pu plonger dans l'administration Windows, le support de niveau 1 et 2 ainsi que la mise en place de petit projet informatique au sein de mon SI.
+
+ Actuellement, je finalise mon Master 2 en "Système réseau cloud computing" à Sciences U tout en étant en alternance à la Métropole de Lyon. En tant que pilote de projet et ressource technique au service opération. C'est ici, que j'ai eu l'opportunité de me familiariser davantage avec Linux, découvrir univers du DevOps, l'automatisation, le scripting et me plonger dans Ansible et la conteneurisation. C'est cette expérience et cette passion pour ce domaine qui nous on poussé, Antoine et moi-même, à vous proposer ce cours, afin de vous partager notre passion, ainsi que nos connaissances sur le sujet ! 
+
+ **Antoine** : Baignant dans l'informatique depuis mon jeune âge, je m'appelle Antoine votre deuxième instructeur principal pour ce cours sur Ansible AWX. Depuis ses quatre dernières années, j'ai effectué mes études en alternance dans le secteur de l'informatique. Suite à un baccalauréat professionnel système numérique, j'ai commencé mes études supérieur dans l'école Maestris pour acquérir mon BTS en tant que administrateur système dans l'entreprise SRA Informatique. Pendant ses deux années j'ai énormément appris sur l'administration système autour du logiciel SageX3 sur Windows et Linux. J'ai ensuite acquis mon Bachelor Système réseau & Cloud Computing à L'ESGI en tant que administrateur système et réseau au sein de l'entreprise Eductive Paris en poursuivant mes connaissances sur l'administration réseau & system en général et mon initialisation au Cloud.
+
+ Actuellement en Master 2 dans la filière Système réseau & Cloud Computing à l'ESGI, j'ai effectué ma première année dans une startup ou j'ai piloté un projet data qui consistait à fluidifié les données au sein de l'entreprise, quelle soit financière, cliente ou interne. C'est cette année la ou j'ai pris conscience de l'importance de l'automatisation ainsi que l'infrastructure as code dans une entreprise. C'est pour cela que aujourd'hui je me suis orienté dans l'entreprise Sanofi dans l'équipe DevOps ou je travail principalement sur la plateforme Ansible Automation Platform (AAP) afin de renforcer mes connaissances sur l'automatisation et l'infrastructure as code. 
+
+Sachez que nous sommes ravis de vous accompagner dans cette apprentissage et de partager avec vous nos connaissances, astuces et meilleures pratiques. Nous veillerons à ce que vous sortiez de cette formation avec des compétences solides et une large compréhension des sujets que nous aurons le plaisir d'aborder.
+
+**Pourquoi ce cours est indispensable pour vous ?** 
+
+ Vous aspirez à maîtriser le monde du DevOps, ou au moins à le découvrir ? la conteneurisation et l'automatisation vous intéresse ? Vous êtes au bon endroit ! Notre cours sur AWX Ansible est conçue pour vous transformer en une ressource technique ayant des connaissances et des compétences sur ce sujet !!!
+
+**Ce que vous allez découvrir :** 
+
+1. **Un voyage guidé** : Partez de zéro et construisez un environnement pour pratiquer sur des cas concret tout au long de notre cours.
+2. **La conteneurisation** : Découvrez comment et pourquoi les conteneurs ont changés la donne dans l'informatique ces 10 dernières années.
+3. **Ansible & GitHub** : Découvrez 2 des outils les plus influents du moment qui gravitent autour du monde DevOps.
+4. **AWX, votre meilleur allié** : Découvrez, déployez et maîtrisez ce superbe outil Open-Source conçu l'automatisation à une échelle industrielle. (Croyez-moi c'est très pratique en entreprise )
+5. **Pratique** : Vous aurez l'occasion testez vos compétences et consolidez votre apprentissage tout au long du cours, avec des exercices pratiques concret, des QCM à chaque fin de chapitre pour valider vos acquis, ainsi qu'un TP final afin d'utiliser toutes les choses que vous aurez appris dans ce cours !
+6. **Explorez au-delà** : Je ne vous en parle pas... ce serait un Spoil ! 
+  
+**Les avantages de notre formation :** 
+
+ - **Interactivité** : Grâce à des QCM, exercices pratiques, et un TP final votre apprentissage sera vivant et engageant, en testant pas à pas vos acquis.
+ - **Complétude** : Avec un récapitulatif final du cours, nous nous assurons que vous avez bien  enregistrer dans votre base de donnée interne, chaque concept important de ce cours.
+ - **Expertise** : Les modules sont conçus par des ~~professionnels~~ passionnés aguerris, garantissant un contenu de qualité !!
+
+**Rejoignez-nous !** 
+
+N'attendez plus ! Choisissez notre cours et placez-vous à la pointe de l'univers DevOps Avec ce cours AWX Ansible, vous êtes prêt à affronter les défis du monde professionnelle ! (Et qui sait... vous pourrez peut-être négocier votre salaire grâce à ces compétences ).
+Mes chères apprenant(e)s, à la fin de se cours, vous serez concrètement capable: 
+-d'utiliser Git en entreprise
+-d'utiliser Ansible en entreprise (création de playbook, et plus encore).
+-aurez acquis des connaissances en conteneurisation
+-Aurez une parfaite autonomie sur la plateforme AWX
+
+---
+
+Cliquer le lien https://youtu.be/RwjriyX46Fs pour ouvrir la ressource.
+
+
+La durée totale du contenu, des exercices aux vidéos explicatives, est estimée entre 10 et 12 heures. 
