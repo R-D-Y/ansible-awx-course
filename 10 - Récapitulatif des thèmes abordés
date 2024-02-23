@@ -1,0 +1,63 @@
+### Récapitulatif des Cours Abordés
+
+Au cours de ce parcours de formation, nous avons exploré de manière approfondie la plateforme AWX et les technologies qui l'entourent: la conteneurisation, Ansible, et GitHub. Chaque module a été conçu pour non seulement introduire les concepts fondamentaux mais aussi pour offrir une expérience pratique à travers des exercices et des projets.
+
+**Présentation de l'Équipe et Introduction au Sujet**
+
+-Nous vous avons présenter l'Introduction par Antoine et Rémi à la plateforme AWX et à l'utilité d'Ansible dans la pratique, ainsi qu'une vue d'ensemble du parcours de formation.
+
+**Mise en Place de l'Environnement**
+
+- Création de l'infrastructure nécessaire via VirtualBox, incluant la VM node, le serveur AD, et la VM master avec les conteneurs AWX.
+- Tutoriels sur l'importation et la configuration des VMs sur VirtualBox.
+- Explications détaillées de l'environnement de travail, flux réseaux principalement !
+
+**Introduction à la Conteneurisation et YAML**
+
+- Apprentissage des concepts de base de la conteneurisation et création du premier Dockerfile.
+- Introduction au YAML, avec focus sur la syntaxe clé/valeur > avec et sans liste.
+- Exercices pratiques sur Docker et YAML, suivis d'un QCM pour évaluer la compréhension de nos apprenants.
+- Correction et explications des QCMs via vidéo et récapitulatif vidéo du module.
+
+**Introduction à Ansible et GitHub**
+
+- Définition et utilisation d'Ansible pour l'automatisation, nous avons découvert ce superbe produit et réalisé nos premier faits d'armes dessus.
+- Création de playbooks et de rôles avec Ansible, et oui, il faut pratiquer pour que ça rentre !!
+- Introduction à GitHub, création de repos et ajout de clés SSH, nous vous avons présenter un large tutoriel de ce que nous pouvons retrouver sur github, afin de pouvoir pleinement l'utiliser.
+- Exercices pratiques sur Ansible et GitHub, évaluation par QCM, et correction vidéo des exercices Ansible.
+
+**Déploiement d’AWX**
+
+- Méthodologie pour déployer AWX à l'aide de conteneurs Docker, comment ça marche...
+- Exploration du contenu des conteneurs AWX pour les utilisateurs curieux, nous vous avons présenter dans ce sous-chapitres ce que contenait nos dockerfiles et comment ces derniers fonctionnaient entres eux.
+
+**Introduction et Pratique d’AWX**
+
+- Découverte et pratique des différentes fonctionnalités d'AWX, découverte des différents onglets, et mise en place de petit paramétrage afin de comprndre comment nous interagissons avec ce produit, inventaires, jobs, authentification... la totale !
+- Tutoriel vidéo sur l'authentification LDAP, étant donné qu'il s'agit d'une partie importante qui ne concerne pas réellement du Ansible pur et dure, une vidéo était ici la bienvenue, cela permet de ne pas rester bloqué sur cette partie !
+
+**TP Final**
+
+Il s'agissait d'un TP reprenant toutes les compétences normalement acquises lors du cours, vous avez pu ici, pratiquer du windows, du linux, du powershell, du Ansible en utilisant donc du YAML,  de l'utilisation de Github, et évidemment, du AWX via sa superbe interface Graphique !
+
+- Ajouter sur AWX l'hôte ADDS en hôte Windows (Inventaire sur Github).
+- Créer un Playbook permettant de créer un compte ActiveDirectory sur notre serveur Windows et d'ajouter ce compte au groupe "Awx_Required_Group" (permettant l'accès à AWX).
+- Mettre ce playbook dans GitHub et l'exécuter dans AWX.
+- Se connecter avec ce nouveau compte sur AWX.
+- Configurer son nouveau compte sur AWX (synchronisation Github, Inventaire, Vault).
+- Ajouter sur AWX l'hôte VM_NODE en hôte Linux (Inventaire sur Github).
+- Créer un second playbook permettant d'installer 3 paquets différents (au choix) sur le VM_NODE.
+- Mettre ce playbook dans GitHub et le mettre à disposition d'AWX avec la synchronisation (sans l'exécuter).
+- Planifier ce playbook sur AWX via le lancement différé, puis attendre l'exécution du playbook.
+- Se reconnecter en tant qu'Administrateur sur AWX.
+- Monitoring: grâce à l'interface Graphique, vérifier que le playbook précédent a bien été exécuté et a bien fonctionné.
+
+**Pour Aller Plus Loin**
+
+- Introduction aux concepts avancés de CI/CD et exploration d'autres plateformes professionnelles similaires à AWX...
+
+**Récapitulatif Général et Bibliographie**
+
+- Consolidation des connaissances et compétences acquises tout au long du cours.
+- Correction des exercices et TP, accompagnée d'une bibliographie pour retrouver nos sources, et bien d'autres pour que vous puissiez avancer de votre côté sur ce sujet.
+
