@@ -1,0 +1,61 @@
+Hello tout le monde !
+
+Vous avez, dans le chapitre précédent, mis en place un environnement de travail... vous devez vous posez plein de question ! pourquoi 3 machines ? que signifie leurs noms, et enfin qu'allons nous en faire ??
+
+Explication du réseau : 
+
+Dans notre infrastructure, nous disposons de deux types de réseaux virtuels. Le premier est le réseau NAT, qui est appliqué à l'ensemble des machines virtuelles (VM). Son rôle principal est de permettre la communication entre ces VM, tout en autorisant leur accès à internet pour l'obtention de certains paquets logiciels et l'accès au repository sur GitHub. Cependant, les VM du réseau NAT mise appart la master n'ont pas accès à la machine hôte.
+
+Le deuxième réseau est le réseau en mode pont, qui est exclusivement associé à la machine virtuelle Master, où Ansible AWX sera installé. Ce mode de configuration permet de visualiser l'interface web d'AWX via un navigateur depuis la machine locale.
+
+Donc pour prendre, voici à quoi ressemble le schéma:
+
+[![Image](https://media.discordapp.net/attachments/638452825441173514/1171722576142278756/image.png?ex=65702baf&is=655db6af&hm=59c5005ad6c3439be7d6d8d8889befced3e92a18c80d4154fe51fd152759d27a&=&format=webp)](https://media.discordapp.net/attachments/638452825441173514/1171722576142278756/image.png?ex=65702baf&is=655db6af&hm=59c5005ad6c3439be7d6d8d8889befced3e92a18c80d4154fe51fd152759d27a&=&format=webp)
+
+---
+
+Les labs seront effectués en virtuel sous VirtualBox. La plateforme des labs est présentée ci-dessus, elle est constituée de 3 machines virtuelles reliés entre elles via un réseaux NAT Network qui sera créer par la suite.
+
+
+Voici le détail des machines :
+```plaintext
+| VM_MASTER | 10.0.2.15/24 |
+|-----------|--------------|
+| Nom DNS   | vm_master    |
+| User      | vm_master    |
+| Password  | toor         |
+```
+Notre VM_MASTER est le cœur du projet, c'est d'ici que partirons toutes les informations, les TP, et les exercies.
+C'est ici que sera héberger la plateforme AWX, cette machine agit comme un worker, et  va permettre d'être la clé de voute de notre labs. 
+Depuis cette machines, vous créerez vos playbook, vous pratiquerez de la CI/CD github, et bien plus encore !
+Le but sera donc, de ne jamais avoir a aller sur une autre machine, tout sera effectuer à partir d'ici :).
+
+
+
+```plaintext
+| VM_NODE   | 10.0.2.4/24  |
+|-----------|--------------|
+| Nom DNS   | vm_node      |
+| User      | vm_node      |
+| Password  | toor         |
+```
+La VM_NODE prendra le rôle de client dans nos exercices, comme si il s'agissait d'un poste utilisateur en entreprise, le but étant, que depuis la machine VM_MASTER, nous agirons sur la machine VM_NODE. Nous nous rendrons sur cette machine uniquement pour constaté notre travail, vous aurez tout au long du cours, des exercices a faire, dont le but sera d'interagir avec cette machine en utilisant AWX. à chaque fin de TP, nous pourrons vous demander d'aller vérifié que vos actions se sont bien déroulé.
+à titre d'exemple, nous pourrons vous demander, via la VM_MASTER, de lancer un playbook sur la VM_NODE afin de créer un utilisateur, à la fin de ce tp fictif, vous aurez peut-être besoin d'aller sur la vm_node afin de vérifier que l'utilisateur a bien été créer.
+
+
+```plaintext
+| ADDS      | 10.0.2.50/24 |
+|-----------|--------------|
+| Nom DNS   |              |
+| User      | Administrateur |
+| Password  | Jsa100pc@    |
+```
+
+l'ADDS... Celui-ci nous servira pour le TP final, mais nous n'en parlerons pas plus ici afin de vous garder la surprise...
+Nous avons quand-même décider de mettre une machine en Windows pour vous vanter les mérites d'AWX Ansible, car en effet, celui-ci peut effectuer des actions aussi bien sur Linux que sur WIndows !!
+Et pour plus d'information, AWX permet de faire des lien avec des LDAP, nous nous en servirons ainsi, vous pourrez donc effectuer des actions, comme en entreprise, depuis des comptes AD, et non forcément des comptes locaux afin d'utiliser les bonnes pratiques !
+
+---
+
+Concernant l'environnement lui-même, nous vous demandons de bien penser a faire des snapshot des machines à chaque fin de chapitre afin d'avoir une utilisation au plus proche de la réalité.
+Afin d'avoir un meilleur interface, nous avons décider d'ouvrir les flux entre le VM_MASTER et votre ordinateur, afin de pouvoir consulter AWX depuis votre navigateur personnel.
