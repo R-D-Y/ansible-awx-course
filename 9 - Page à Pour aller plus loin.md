@@ -33,7 +33,8 @@ Nous explorons des scénarios d'automatisation plus technique que vu précédemm
    - **Concrètement... :** Créez des Jobs Ansible pour gérer automatiquement les ressources cloud (comme les instances VM, les réseaux, le stockage) et intégrez-les dans AWX pour une gestion centralisée, il est par exemple possible de créer des inventaires dynamique, de ce fait, en créant par exemple des machines sur AWS, avec un TAG spécifique, AWX, en étant paramétrer correctement, aura la possibilité de repérer ces tags et ainsi les rendre disponibles sur AWX afin d'y lancer des Jobs.
    - **Bénéfices :** Une efficacité dans la gestion des ressources cloud (VM, S3...) et une intégration fluide et dynamique avec l'infrastructure existante.
 
-https://media.geeksforgeeks.org/wp-content/uploads/20201225224938/4.png
+![image](https://github.com/R-D-Y/ansible-awx-course/assets/102509252/76399ce0-aa2a-4275-8392-5a4024a1202a)
+
 
 
 
